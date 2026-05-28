@@ -13,6 +13,25 @@ const related = relatedPages(page);
 ---
 
 <article class="seo-article" id="ratgeber">
+  <header class="article-header">
+    <p>Ratgeber</p>
+    <h2>{page.keyword} richtig vorbereiten</h2>
+    <div class="article-summary">
+      <div>
+        <span>Geeignet fuer</span>
+        <strong>{page.intent}</strong>
+      </div>
+      <div>
+        <span>Qualitaet</span>
+        <strong>{page.qualityFocus}</strong>
+      </div>
+      <div>
+        <span>Datenschutz</span>
+        <strong>{page.privacyFocus}</strong>
+      </div>
+    </div>
+  </header>
+
   {sections.map((section) => (
     <section class="article-section">
       <h2>{section.heading}</h2>

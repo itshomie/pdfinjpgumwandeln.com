@@ -1,5 +1,6 @@
 ---
 import Hero from "../components/Hero.astro";
+import KeywordDirectory from "../components/KeywordDirectory.astro";
 import SeoArticle from "../components/SeoArticle.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { homePage, pathFor } from "../data/pages";
@@ -13,5 +14,6 @@ import { schemaForPage } from "../lib/schema";
   jsonLd={schemaForPage(homePage)}
 >
   <Hero page={homePage} home />
+  <KeywordDirectory />
   <SeoArticle page={homePage} />
 </BaseLayout>

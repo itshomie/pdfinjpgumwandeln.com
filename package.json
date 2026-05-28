@@ -1,7 +1,7 @@
 {
   "name": "pdf-in-jpg-umwandeln",
   "version": "1.0.0",
-  "description": "Deutsche SEO-Website und Browser-Tools fuer PDF-, JPG-, SVG- und TIFF-Konvertierung.",
+  "description": "Deutsches Browser-Tool fuer PDF-, JPG-, SVG- und TIFF-Konvertierung.",
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",

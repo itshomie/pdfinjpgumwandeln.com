@@ -27,8 +27,8 @@ export function buildSeoSections(page: SeoPage): ArticleSection[] {
     {
       heading: `${keyword}: was Nutzer wirklich erwarten`,
       paragraphs: [
-        `${keyword} ist keine abstrakte Formatfrage, sondern meistens ein sehr konkreter Arbeitsmoment. ${page.audience} moechten ${page.intent}. ${page.angle} Deshalb beginnt diese Seite mit dem passenden Werkzeug und fuehrt danach durch die Entscheidungen, die fuer ein gutes Ergebnis wichtig sind: Dateityp, Reihenfolge, Qualitaet, Datenschutz und die spaetere Verwendung.`,
-        `Der typische Ausgangspunkt ist klar: ${page.scenario} In genau solchen Situationen stoert ein kompliziertes Programm, eine Registrierung oder eine unklare Upload-Strecke. Nutzer brauchen ein Ergebnis, das sofort pruefbar ist und in der Zielanwendung funktioniert. Die Anleitung ist deshalb bewusst praktisch geschrieben und trennt technische Details von den Schritten, die direkt ausgefuehrt werden muessen.`
+        `${keyword} ist meistens kein theoretisches Formatproblem, sondern ein konkreter Arbeitsmoment. ${page.audience} moechten ${page.intent}. Wichtig sind dabei drei Dinge: Die Datei soll schnell verarbeitet werden, das Ergebnis muss in der Zielanwendung funktionieren, und vertrauliche Inhalte sollen nicht unnoetig weitergegeben werden.`,
+        `Der typische Ausgangspunkt ist klar: ${page.scenario} In solchen Situationen stoert ein kompliziertes Programm, eine Registrierung oder eine unklare Upload-Strecke. Ein brauchbarer Workflow zeigt deshalb zuerst die Datei, die Ausgabeoptionen und den Download, bevor Detailfragen wie Qualitaet, Dateigroesse oder Seitenumfang entschieden werden.`
       ]
     },
     {
@@ -41,7 +41,7 @@ export function buildSeoSections(page: SeoPage): ArticleSection[] {
     {
       heading: "Schritt fuer Schritt",
       paragraphs: [
-        `Fuer diese Suchanfrage sind die Schritte bewusst knapp gehalten: ${page.steps.join(" ")} Diese Liste wirkt einfach, aber sie deckt die typischen Fehlerquellen ab. Wer mehrere Dateien verarbeitet, sollte vor dem Download besonders auf Reihenfolge und Dateinamen achten. Wer nur eine einzelne Seite braucht, sollte nicht automatisch alle Seiten exportieren, weil dadurch unnoetige Dateien entstehen.`,
+        `Fuer diese Aufgabe sind die Schritte bewusst knapp gehalten: ${page.steps.join(" ")} Diese Liste wirkt einfach, deckt aber die typischen Fehlerquellen ab. Wer mehrere Dateien verarbeitet, sollte vor dem Download besonders auf Reihenfolge und Dateinamen achten. Wer nur eine einzelne Seite braucht, sollte nicht automatisch alle Seiten exportieren, weil dadurch unnoetige Dateien entstehen.`,
         `Nach dem Download lohnt sich ein kurzer Test in der Zielumgebung. Wird die Datei in einem Formular hochgeladen, sollte sie dort in der Vorschau lesbar sein. Wird sie per E-Mail verschickt, sollte die Dateigroesse zum Anhanglimit passen. Wird sie in einem CMS eingesetzt, sind Bildabmessungen und Dateiname oft genauso wichtig wie die reine visuelle Qualitaet.`
       ]
     },
@@ -69,15 +69,15 @@ export function buildSeoSections(page: SeoPage): ArticleSection[] {
     {
       heading: "Wann ein anderes Format besser ist",
       paragraphs: [
-        `Nicht jede Suchanfrage endet im gleichen Zielformat. Fuer Fotos und schnelle Webvorschauen ist JPG stark, fuer Dokumentstapel ist PDF oft besser, fuer Archiv- und Scanprozesse kann TIFF verlangt werden, und fuer Webgrafiken oder technische Weitergabe kann SVG oder ein echter Vektorworkflow sinnvoll sein. Wer das Zielformat nur waehlt, weil es irgendwo vorgeschlagen wurde, erzeugt leicht eine Datei, die spaeter nicht optimal funktioniert.`,
-        `Die verwandten Seiten zu ${relatedNames || "aehnlichen Konvertierungen"} helfen, den naechsten Schritt zu waehlen. Wichtig ist dabei: Ein neues Dateiformat verbessert nicht automatisch die Quelle. Ein unscharfer Scan bleibt unscharf, ein JPG wird durch PDF nicht durchsuchbar, und ein Rasterbild wird durch eine Vektor-Endung nicht zu sauberen Pfaden.`
+        `Nicht jeder Fall endet im gleichen Zielformat. Fuer Fotos und schnelle Webvorschauen ist JPG stark, fuer Dokumentstapel ist PDF oft besser, fuer Archiv- und Scanprozesse kann TIFF verlangt werden, und fuer Webgrafiken oder technische Weitergabe kann SVG oder ein echter Vektorworkflow sinnvoll sein. Wer das Zielformat nur waehlt, weil es irgendwo vorgeschlagen wurde, erzeugt leicht eine Datei, die spaeter nicht optimal funktioniert.`,
+        `Wenn dein Fall in Richtung ${relatedNames || "aehnliche Konvertierung"} geht, lohnt sich ein Blick in die passende Anleitung. Wichtig ist dabei: Ein neues Dateiformat verbessert nicht automatisch die Quelle. Ein unscharfer Scan bleibt unscharf, ein JPG wird durch PDF nicht durchsuchbar, und ein Rasterbild wird durch eine Vektor-Endung nicht zu sauberen Pfaden.`
       ]
     },
     {
       heading: "Praxisbeispiele aus Deutschland",
       paragraphs: [
         `Im deutschen Alltag geht es oft um sehr konkrete Portale: Bewerbungsplattformen, Versicherungsformulare, Kleinanzeigen, Hochschulportale, interne Ticket-Systeme oder Behoerden-Uploads. Diese Systeme akzeptieren nicht immer die Datei, die Nutzer gerade vorliegen haben. Deshalb ist ein schneller, lokaler Formatwechsel nuetzlich, solange das Ergebnis nachvollziehbar bleibt.`,
-        `Ein Beispiel: Ein Nutzer hat ein PDF mit drei Seiten und braucht nur die erste Seite als Bild fuer eine Vorschau. In diesem Fall ist ein gezielter JPG-Export sinnvoller als ein grosses Paket. Ein anderes Beispiel: Mehrere Fotos von Belegen sollen als eine Anlage hochgeladen werden. Dann ist der Weg von JPG zu PDF passender. Die Suchintention entscheidet also, nicht der Name des Tools.`
+        `Ein Beispiel: Ein Nutzer hat ein PDF mit drei Seiten und braucht nur die erste Seite als Bild fuer eine Vorschau. In diesem Fall ist ein gezielter JPG-Export sinnvoller als ein grosses Paket. Ein anderes Beispiel: Mehrere Fotos von Belegen sollen als eine Anlage hochgeladen werden. Dann ist der Weg von JPG zu PDF passender. Entscheidend ist immer, wie die Datei danach verwendet wird.`
       ]
     },
     {
@@ -90,8 +90,8 @@ export function buildSeoSections(page: SeoPage): ArticleSection[] {
     {
       heading: "Fazit",
       paragraphs: [
-        `${keyword} funktioniert am besten, wenn Werkzeug, Format und Zielnutzung zusammenpassen. Diese Seite liefert deshalb nicht nur den direkten Export, sondern auch die Hinweise, die ein brauchbares Ergebnis von einer schnellen, aber fehlerhaften Datei unterscheiden. Wer Qualitaet kurz testet, Datenschutz beachtet und das Zielformat bewusst waehlt, spart spaeter Korrekturen.`,
-        `Nutze zuerst das Werkzeug auf dieser Seite und oeffne danach die passenden Detailseiten, wenn dein Fall genauer ist: Windows, Mac, Handy, Online-Nutzung, mehrere Bilder, SVG, TIFF oder Vektorpruefung. So bleibt jede Seite auf einen Kernbegriff fokussiert, waehrend die internen Links den naechsten sinnvollen Schritt anbieten.`
+        `${keyword} funktioniert am besten, wenn Werkzeug, Format und Zielnutzung zusammenpassen. Der direkte Export ist nur der erste Schritt; ein gutes Ergebnis braucht ausserdem passende Qualitaet, saubere Dateinamen und eine kurze Kontrolle vor dem Weitergeben. Wer diese Punkte beachtet, spart spaeter Korrekturen.`,
+        `Beginne mit dem Werkzeug, pruefe das Ergebnis und waehle bei Bedarf eine genauere Anleitung fuer Windows, Mac, Handy, Online-Nutzung, mehrere Bilder, SVG, TIFF oder Vektorpruefung. So kommst du schneller zu einer Datei, die im Alltag wirklich verwendet werden kann.`
       ]
     }
   ];

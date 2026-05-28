@@ -1,0 +1,53 @@
+---
+import { pathFor, seoPages } from "../data/pages";
+
+const groups = [
+  {
+    title: "PDF in JPG",
+    description: "Alle Varianten fuer PDF-Seiten, JPG-Export, Online-Nutzung und kostenlose Konvertierung.",
+    pages: seoPages.filter((page) => page.toolMode === "pdf-to-jpg" && page.group !== "platform")
+  },
+  {
+    title: "Windows, Mac und Handy",
+    description: "Anleitungen fuer typische Geraete und Betriebssysteme.",
+    pages: seoPages.filter((page) => page.group === "platform")
+  },
+  {
+    title: "JPG in PDF",
+    description: "Bilder, Scans und Fotos als einzelne PDF-Datei speichern.",
+    pages: seoPages.filter((page) => page.toolMode === "jpg-to-pdf" && page.group !== "platform")
+  },
+  {
+    title: "SVG, TIFF und Vektor",
+    description: "Spezialformate fuer Webgrafiken, Archiv, Druckvorstufe und Vektorpruefung.",
+    pages: seoPages.filter((page) =>
+      ["pdf-to-svg", "pdf-to-tiff", "svg-to-pdf", "tiff-to-pdf", "pdf-audit"].includes(page.toolMode)
+    )
+  }
+];
+---
+
+<section class="keyword-directory" id="alle-anleitungen" aria-labelledby="directory-heading">
+  <div class="directory-head">
+    <h2 id="directory-heading">Alle Konverter und Anleitungen</h2>
+    <p>
+      Waehle den passenden Fall direkt aus. Jede Anleitung fuehrt zum passenden
+      Werkzeug und erklaert die wichtigsten Einstellungen fuer das jeweilige Format.
+    </p>
+  </div>
+  <div class="directory-grid">
+    {groups.map((group) => (
+      <section class="directory-group">
+        <h3>{group.title}</h3>
+        <p>{group.description}</p>
+        <ul>
+          {group.pages.map((page) => (
+            <li>
+              <a href={pathFor(page)}>{page.keyword}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</section>

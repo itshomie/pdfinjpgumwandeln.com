@@ -21,7 +21,7 @@ const { page, home = false } = Astro.props;
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
-    <img src="/assets/landing-concept.png" alt="" loading={home ? "eager" : "lazy"} />
+    <img src="/assets/hero-conversion.png" alt="" loading={home ? "eager" : "lazy"} />
   </div>
 </section>
 
@@ -29,8 +29,8 @@ const { page, home = false } = Astro.props;
   <div class="tool-intro">
     <h2>Direkter Konverter fuer {page.keyword}</h2>
     <p>
-      Waehle eine Datei aus und verarbeite sie lokal im Browser. Die sichtbaren
-      Optionen passen zum Suchziel dieser Seite.
+      Waehle eine Datei aus, stelle die Ausgabequalitaet ein und lade das
+      Ergebnis direkt herunter. Die Verarbeitung laeuft lokal im Browser.
     </p>
   </div>
   <ConverterTool client:only="react" mode={page.toolMode} keyword={page.keyword} />

@@ -3,6 +3,7 @@ import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../dist", import.meta.url));
+const sourceRoot = fileURLToPath(new URL("../", import.meta.url));
 const minWords = 800;
 const exceptions = new Set([
   "datenschutz/index.html",
@@ -18,10 +19,22 @@ if (!existsSync(root)) {
 const htmlFiles = walk(root).filter((file) => file.endsWith(".html"));
 const failures = [];
 const h1s = new Map();
+const blockedVisibleTerms = [
+  "SEO",
+  "Suchseiten",
+  "Kernbegriff",
+  "Suchintention",
+  "Suchanfrage",
+  "redaktionelle",
+  "produktive Veroeffentlichung",
+  "Betreiberangaben",
+  "Sitemap"
+];
 
 for (const file of htmlFiles) {
   const rel = relative(root, file);
   const html = readFileSync(file, "utf8");
+  const text = htmlToText(html);
   if (html.includes("mailto:")) {
     failures.push(`${rel}: Kontakt-E-Mail darf kein mailto-Link sein.`);
   }
@@ -39,8 +52,13 @@ for (const file of htmlFiles) {
     h1s.set(h1, rel);
   }
 
+  for (const term of blockedVisibleTerms) {
+    if (text.includes(term)) {
+      failures.push(`${rel}: sichtbarer Betriebs-/SEO-Begriff gefunden: ${term}`);
+    }
+  }
+
   if (!exceptions.has(rel)) {
-    const text = htmlToText(html);
     const count = wordCount(text);
     if (count < minWords) {
       failures.push(`${rel}: nur ${count} Woerter, erwartet mindestens ${minWords}.`);
@@ -50,6 +68,15 @@ for (const file of htmlFiles) {
 
 if (!existsSync(join(root, "sitemap.xml"))) failures.push("sitemap.xml fehlt.");
 if (!existsSync(join(root, "robots.txt"))) failures.push("robots.txt fehlt.");
+
+const indexHtml = readFileSync(join(root, "index.html"), "utf8");
+const pageSource = readFileSync(join(sourceRoot, "src/data/pages.ts"), "utf8");
+const slugs = [...pageSource.matchAll(/slug: "([^"]+)"/g)].map((match) => match[1]).filter(Boolean);
+for (const slug of slugs) {
+  if (!indexHtml.includes(`href="/${slug}/"`)) {
+    failures.push(`index.html: Link zu /${slug}/ fehlt.`);
+  }
+}
 
 if (failures.length) {
   console.error(failures.join("\n"));
