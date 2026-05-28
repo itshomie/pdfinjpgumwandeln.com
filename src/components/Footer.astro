@@ -1,5 +1,49 @@
 ---
-import { site } from "../data/pages";
+import { pageBySlug, pathFor, site } from "../data/pages";
+
+function footerLink(slug: string, label: string) {
+  const page = pageBySlug(slug);
+  if (!page) throw new Error(`Footer page not found: ${slug}`);
+  return { label, href: pathFor(page) };
+}
+
+const footerGroups = [
+  {
+    title: "PDF zu Bild",
+    links: [
+      { label: "PDF in JPG", href: "/" },
+      footerLink("pdf-in-jpg-umwandeln-online", "Online nutzen"),
+      footerLink("pdf-in-jpg-umwandeln-windows", "Windows"),
+      footerLink("pdf-in-jpg-umwandeln-mac", "Mac"),
+      footerLink("pdf-in-jpg-umwandeln-handy", "Handy")
+    ]
+  },
+  {
+    title: "Bild zu PDF",
+    links: [
+      footerLink("jpg-in-pdf-umwandeln", "JPG in PDF"),
+      footerLink("mehrere-jpg-in-pdf-umwandeln", "Mehrere JPG"),
+      footerLink("jpg-in-pdf-umwandeln-online", "Online"),
+      footerLink("jpg-in-pdf-umwandeln-handy", "Handy")
+    ]
+  },
+  {
+    title: "Spezialformate",
+    links: [
+      footerLink("pdf-in-svg-umwandeln", "PDF in SVG"),
+      footerLink("pdf-in-tiff-umwandeln", "PDF in TIFF"),
+      footerLink("pdf-in-eps-umwandeln", "PDF in EPS"),
+      footerLink("pdf-in-vektordatei-umwandeln", "Vektordatei pruefen")
+    ]
+  }
+];
+
+const legalLinks = [
+  { label: "Über uns", href: "/ueber-uns/" },
+  { label: "Kontakt", href: "/kontakt/" },
+  { label: "Datenschutz", href: "/datenschutz/" },
+  { label: "Impressum", href: "/impressum/" }
+];
 ---
 
 <footer class="site-footer">
@@ -11,11 +55,17 @@ import { site } from "../data/pages";
         Kontakt: {site.email}
       </p>
     </div>
-    <nav aria-label="Footer Navigation">
-      <a href="/ueber-uns/">Über uns</a>
-      <a href="/kontakt/">Kontakt</a>
-      <a href="/datenschutz/">Datenschutz</a>
-      <a href="/impressum/">Impressum</a>
+    <nav class="footer-nav" aria-label="Footer Navigation">
+      {footerGroups.map((group) => (
+        <div class="footer-column">
+          <h2>{group.title}</h2>
+          {group.links.map((link) => <a href={link.href}>{link.label}</a>)}
+        </div>
+      ))}
+      <div class="footer-column">
+        <h2>Website</h2>
+        {legalLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
     </nav>
   </div>
 </footer>

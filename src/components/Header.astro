@@ -1,5 +1,18 @@
 ---
-import { site } from "../data/pages";
+import { pageBySlug, pathFor, site } from "../data/pages";
+
+const navItems = [
+  { label: "PDF in JPG", href: "/" },
+  { label: "JPG in PDF", slug: "jpg-in-pdf-umwandeln" },
+  { label: "PDF in SVG", slug: "pdf-in-svg-umwandeln" },
+  { label: "Alle Tools", href: "/#alle-anleitungen" },
+  { label: "Kontakt", href: "/kontakt/" }
+].map((item) => {
+  if ("href" in item) return item;
+  const page = pageBySlug(item.slug);
+  if (!page) throw new Error(`Navigation page not found: ${item.slug}`);
+  return { label: item.label, href: pathFor(page) };
+});
 ---
 
 <header class="site-header">
@@ -8,9 +21,6 @@ import { site } from "../data/pages";
     <span>{site.name}</span>
   </a>
   <nav class="main-nav" aria-label="Hauptnavigation">
-    <a href="/#konverter">Konverter</a>
-    <a href="/#alle-anleitungen">Anleitungen</a>
-    <a href="/kostenlos-pdf-in-jpg-umwandeln/">Kostenlos</a>
-    <a href="/kontakt/">Kontakt</a>
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
   </nav>
 </header>

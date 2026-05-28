@@ -12,8 +12,7 @@ const groupLabels: Record<string, string> = {
   "tiff-pdf": "TIFF/PDF",
   vector: "Vektor",
   platform: "Plattform",
-  online: "Online",
-  free: "Kostenlos"
+  online: "Online"
 };
 
 export function buildSeoSections(page: SeoPage): ArticleSection[] {

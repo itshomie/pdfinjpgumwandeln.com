@@ -1,28 +1,54 @@
 ---
-import { pathFor, seoPages } from "../data/pages";
+import { homePage, pageBySlug, pathFor } from "../data/pages";
+
+function linkFor(slug: string, label?: string) {
+  const page = pageBySlug(slug);
+  if (!page) throw new Error(`Directory page not found: ${slug}`);
+  return {
+    label: label ?? page.keyword,
+    href: pathFor(page)
+  };
+}
 
 const groups = [
   {
     title: "PDF in JPG",
-    description: "Alle Varianten fuer PDF-Seiten, JPG-Export, Online-Nutzung und kostenlose Konvertierung.",
-    pages: seoPages.filter((page) => page.toolMode === "pdf-to-jpg" && page.group !== "platform")
-  },
-  {
-    title: "Windows, Mac und Handy",
-    description: "Anleitungen fuer typische Geraete und Betriebssysteme.",
-    pages: seoPages.filter((page) => page.group === "platform")
+    description: "Der Haupt-Workflow plus echte Unterschiede nach Nutzungssituation und Geraet.",
+    pages: [
+      { label: homePage.keyword, href: pathFor(homePage) },
+      linkFor("pdf-in-jpg-umwandeln-online"),
+      linkFor("pdf-in-jpg-umwandeln-windows"),
+      linkFor("pdf-in-jpg-umwandeln-mac"),
+      linkFor("pdf-in-jpg-umwandeln-handy"),
+      linkFor("pdf-in-bilddatei-umwandeln")
+    ]
   },
   {
     title: "JPG in PDF",
     description: "Bilder, Scans und Fotos als einzelne PDF-Datei speichern.",
-    pages: seoPages.filter((page) => page.toolMode === "jpg-to-pdf" && page.group !== "platform")
+    pages: [
+      linkFor("jpg-in-pdf-umwandeln"),
+      linkFor("mehrere-jpg-in-pdf-umwandeln"),
+      linkFor("jpg-in-pdf-umwandeln-online"),
+      linkFor("jpg-in-pdf-umwandeln-handy"),
+      linkFor("jpg-in-pdf-umwandeln-windows"),
+      linkFor("jpg-in-pdf-umwandeln-mac")
+    ]
   },
   {
-    title: "SVG, TIFF und Vektor",
-    description: "Spezialformate fuer Webgrafiken, Archiv, Druckvorstufe und Vektorpruefung.",
-    pages: seoPages.filter((page) =>
-      ["pdf-to-svg", "pdf-to-tiff", "svg-to-pdf", "tiff-to-pdf", "pdf-audit"].includes(page.toolMode)
-    )
+    title: "PDF in Spezialformate",
+    description: "Gezielte Seiten fuer SVG, TIFF, EPS und Vektorpruefung.",
+    pages: [
+      linkFor("pdf-in-svg-umwandeln"),
+      linkFor("pdf-in-tiff-umwandeln"),
+      linkFor("pdf-in-eps-umwandeln"),
+      linkFor("pdf-in-vektordatei-umwandeln")
+    ]
+  },
+  {
+    title: "SVG und TIFF zu PDF",
+    description: "Rueckwege fuer Grafiken, Scans und Archivdateien.",
+    pages: [linkFor("svg-in-pdf-umwandeln"), linkFor("tiff-in-pdf-umwandeln")]
   }
 ];
 ---
@@ -31,8 +57,8 @@ const groups = [
   <div class="directory-head">
     <h2 id="directory-heading">Alle Konverter und Anleitungen</h2>
     <p>
-      Waehle den passenden Fall direkt aus. Jede Anleitung fuehrt zum passenden
-      Werkzeug und erklaert die wichtigsten Einstellungen fuer das jeweilige Format.
+      Waehle den passenden Fall direkt aus. Die Liste fuehrt zu eigenstaendigen
+      Aufgaben statt zu mehrfachen Formulierungen desselben Vorgangs.
     </p>
   </div>
   <div class="directory-grid">
@@ -43,7 +69,7 @@ const groups = [
         <ul>
           {group.pages.map((page) => (
             <li>
-              <a href={pathFor(page)}>{page.keyword}</a>
+              <a href={page.href}>{page.label}</a>
             </li>
           ))}
         </ul>
