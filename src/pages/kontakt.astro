@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/pages";
+---
+
+<BaseLayout
+  title="Kontakt - PDF in JPG umwandeln"
+  description="Kontakt zu pdfinjpgumwandeln.com. Hinweise und Supportanfragen bitte an die angegebene E-Mail-Adresse senden."
+  canonicalPath="/kontakt/"
+>
+  <section class="simple-page">
+    <h1>Kontakt</h1>
+    <p>
+      Fuer Fragen zum Werkzeug, Hinweise zu fehlerhaften Seiten oder allgemeine
+      Rueckmeldungen erreichen Sie uns per E-Mail.
+    </p>
+    <p class="contact-email">{site.email}</p>
+    <p>
+      Bitte beschreiben Sie bei technischen Problemen den verwendeten Browser,
+      das Betriebssystem, den gewuenschten Konvertierungsweg und die sichtbare
+      Fehlermeldung. Senden Sie keine vertraulichen Dokumente, wenn diese fuer
+      die Beschreibung des Problems nicht notwendig sind.
+    </p>
+  </section>
+</BaseLayout>

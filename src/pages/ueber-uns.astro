@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/pages";
+---
+
+<BaseLayout
+  title="Über uns - PDF in JPG umwandeln"
+  description="Informationen ueber pdfinjpgumwandeln.com, ein deutsches Browser-Werkzeug fuer Datei-Konvertierungen."
+  canonicalPath="/ueber-uns/"
+>
+  <section class="simple-page">
+    <h1>Über uns</h1>
+    <p>
+      pdfinjpgumwandeln.com ist ein deutsches Werkzeug- und Ratgeberprojekt fuer
+      Menschen, die PDF-, JPG-, SVG- und TIFF-Dateien ohne komplizierte Software
+      in ein passendes Format bringen moechten.
+    </p>
+    <p>
+      Der Schwerpunkt liegt auf klaren Anleitungen, lokaler Browser-Verarbeitung
+      und Suchseiten, die jeweils eine konkrete Aufgabe behandeln. Jede
+      Ratgeberseite hat einen eigenen Kernbegriff und fuehrt zu einem passenden
+      Werkzeug oder einer realistischen Arbeitsweise.
+    </p>
+    <p>
+      Kontakt fuer Hinweise, Fehlerberichte und redaktionelle Rueckfragen:
+      {site.email}
+    </p>
+  </section>
+</BaseLayout>

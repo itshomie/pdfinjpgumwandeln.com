@@ -1,0 +1,37 @@
+---
+import type { SeoPage } from "../data/pages";
+import ConverterTool from "./ConverterTool";
+
+interface Props {
+  page: SeoPage;
+  home?: boolean;
+}
+
+const { page, home = false } = Astro.props;
+---
+
+<section class={`hero ${home ? "hero-home" : ""}`}>
+  <div class="hero-copy">
+    <p class="domain-line">pdfinjpgumwandeln.com</p>
+    <h1>{page.keyword}</h1>
+    <p class="hero-lede">{page.description}</p>
+    <div class="hero-actions">
+      <a href="#konverter" class="button primary">Datei umwandeln</a>
+      <a href="#ratgeber" class="button secondary">Anleitung lesen</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <img src="/assets/landing-concept.png" alt="" loading={home ? "eager" : "lazy"} />
+  </div>
+</section>
+
+<section class="tool-band" id="konverter">
+  <div class="tool-intro">
+    <h2>Direkter Konverter fuer {page.keyword}</h2>
+    <p>
+      Waehle eine Datei aus und verarbeite sie lokal im Browser. Die sichtbaren
+      Optionen passen zum Suchziel dieser Seite.
+    </p>
+  </div>
+  <ConverterTool client:only="react" mode={page.toolMode} keyword={page.keyword} />
+</section>

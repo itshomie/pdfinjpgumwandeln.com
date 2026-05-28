@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/pages";
+---
+
+<BaseLayout
+  title="Datenschutz - PDF in JPG umwandeln"
+  description="Datenschutzhinweise fuer pdfinjpgumwandeln.com mit Fokus auf lokale Browser-Verarbeitung und Kontaktaufnahme."
+  canonicalPath="/datenschutz/"
+>
+  <section class="simple-page legal-page">
+    <h1>Datenschutz</h1>
+    <p>
+      Diese Website stellt Informationen und browserbasierte Werkzeuge zur
+      Dateikonvertierung bereit. Die Konvertierungsfunktionen sind so angelegt,
+      dass ausgewaehlte Dateien im Browser verarbeitet werden. Fuer den normalen
+      Konvertierungsvorgang ist kein Upload an einen Anwendungsserver vorgesehen.
+    </p>
+    <h2>Kontakt</h2>
+    <p>
+      Wenn Sie uns kontaktieren, verarbeiten wir die von Ihnen uebermittelten
+      Angaben zur Bearbeitung der Anfrage. Die Kontaktadresse lautet:
+      {site.email}
+    </p>
+    <h2>Serverdaten</h2>
+    <p>
+      Beim Aufruf einer Webseite koennen technisch notwendige Serverdaten wie
+      IP-Adresse, Zeitpunkt, aufgerufene URL, Browserkennung und Referrer
+      verarbeitet werden. Diese Daten dienen der Auslieferung und Sicherheit der
+      Website.
+    </p>
+    <h2>Cookies und Analyse</h2>
+    <p>
+      Die aktuelle Umsetzung benoetigt keine Tracking-Cookies und keine
+      personenbezogene Webanalyse. Sollte sich dies aendern, wird diese Seite
+      entsprechend angepasst.
+    </p>
+    <h2>Ihre Rechte</h2>
+    <p>
+      Sie koennen Auskunft, Berichtigung, Loeschung oder Einschraenkung der
+      Verarbeitung verlangen, soweit die gesetzlichen Voraussetzungen vorliegen.
+      Wenden Sie sich dazu an die oben genannte Kontaktadresse.
+    </p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+import type { SeoPage } from "../data/pages";
+import { buildSeoSections, faqFor, relatedPages } from "../lib/content";
+
+interface Props {
+  page: SeoPage;
+}
+
+const { page } = Astro.props;
+const sections = buildSeoSections(page);
+const faqs = faqFor(page);
+const related = relatedPages(page);
+---
+
+<article class="seo-article" id="ratgeber">
+  {sections.map((section) => (
+    <section class="article-section">
+      <h2>{section.heading}</h2>
+      {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </section>
+  ))}
+
+  <section class="article-section faq-section" id="fragen">
+    <h2>Haeufige Fragen zu {page.keyword}</h2>
+    <div class="faq-list">
+      {faqs.map((item) => (
+        <details>
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="article-section related-section" aria-labelledby="related-heading">
+    <h2 id="related-heading">Verwandte Anleitungen</h2>
+    <div class="related-links">
+      {related.map((item) => (
+        <a href={item.path}>
+          <span>{item.keyword}</span>
+          <small>{item.description}</small>
+        </a>
+      ))}
+    </div>
+  </section>
+</article>

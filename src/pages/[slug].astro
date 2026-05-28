@@ -1,0 +1,30 @@
+---
+import Hero from "../components/Hero.astro";
+import SeoArticle from "../components/SeoArticle.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pathFor, seoPages, type SeoPage } from "../data/pages";
+import { schemaForPage } from "../lib/schema";
+
+export function getStaticPaths() {
+  return seoPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page }
+  }));
+}
+
+interface Props {
+  page: SeoPage;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  title={page.title}
+  description={page.description}
+  canonicalPath={pathFor(page)}
+  jsonLd={schemaForPage(page)}
+>
+  <Hero page={page} />
+  <SeoArticle page={page} />
+</BaseLayout>
