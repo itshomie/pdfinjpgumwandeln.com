@@ -6,6 +6,7 @@ const root = fileURLToPath(new URL("../dist", import.meta.url));
 const sourceRoot = fileURLToPath(new URL("../", import.meta.url));
 const minWords = 800;
 const exceptions = new Set([
+  "404.html",
   "datenschutz/index.html",
   "kontakt/index.html",
   "ueber-uns/index.html",
