@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import EmailAddress from "../components/EmailAddress.astro";
 import { site } from "../data/pages";
 ---
 
@@ -7,7 +8,6 @@ import { site } from "../data/pages";
   title="Impressum - PDF in JPG umwandeln"
   description="Impressum und Kontaktangaben für pdfinjpgumwandeln.com."
   canonicalPath="/impressum/"
-  robots="noindex, follow"
 >
   <section class="simple-page legal-page">
     <h1>Impressum</h1>
@@ -16,7 +16,7 @@ import { site } from "../data/pages";
       pdfinjpgumwandeln.com.
     </p>
     <h2>Kontakt</h2>
-    <p>{site.email}</p>
+    <p><EmailAddress value={site.email} /></p>
     <h2>Verantwortung für Inhalte</h2>
     <p>
       Die Inhalte werden mit Sorgfalt erstellt. Für die

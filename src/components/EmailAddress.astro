@@ -1,0 +1,9 @@
+---
+interface Props {
+  value: string;
+}
+
+const { value } = Astro.props;
+---
+
+<span set:html={`<!--email_off-->${value}<!--/email_off-->`} />

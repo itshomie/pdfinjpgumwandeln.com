@@ -12,7 +12,6 @@ const exceptions = new Set([
   "ueber-uns/index.html",
   "impressum/index.html"
 ]);
-const supportPagePaths = new Set(["/datenschutz/", "/kontakt/", "/ueber-uns/", "/impressum/"]);
 
 if (!existsSync(root)) {
   throw new Error("dist fehlt. Bitte zuerst astro build ausführen.");
@@ -44,6 +43,9 @@ for (const file of htmlFiles) {
   if (html.includes("mailto:")) {
     failures.push(`${rel}: Kontakt-E-Mail darf kein mailto-Link sein.`);
   }
+  if (html.includes("/cdn-cgi/l/email-protection")) {
+    failures.push(`${rel}: Cloudflare-E-Mail-Schutzlink darf nicht im HTML stehen.`);
+  }
   if (!html.includes("<link rel=\"canonical\"")) {
     failures.push(`${rel}: canonical fehlt.`);
   }
@@ -51,12 +53,8 @@ for (const file of htmlFiles) {
     failures.push(`${rel}: meta description fehlt.`);
   }
   const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1] ?? "";
-  if (exceptions.has(rel)) {
-    if (!robots.includes("noindex")) {
-      failures.push(`${rel}: Support-/Policy-Seite muss noindex sein.`);
-    }
-  } else if (robots.includes("noindex")) {
-    failures.push(`${rel}: SEO-Seite ist versehentlich noindex.`);
+  if (rel !== "404.html" && robots.includes("noindex")) {
+    failures.push(`${rel}: Seite ist noindex.`);
   }
 
   const h1 = html.match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1]?.replace(/<[^>]+>/g, "").trim();
@@ -94,18 +92,30 @@ if (!existsSync(join(root, "robots.txt"))) failures.push("robots.txt fehlt.");
 if (existsSync(join(root, "sitemap.xml"))) {
   const sitemap = readFileSync(join(root, "sitemap.xml"), "utf8");
   const sitemapUrls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
-  for (const path of supportPagePaths) {
-    if (sitemapUrls.includes(`https://pdfinjpgumwandeln.com${path}`)) {
-      failures.push(`sitemap.xml: Support-/Policy-Seite darf nicht enthalten sein: ${path}`);
-    }
-  }
   for (const file of htmlFiles) {
     const rel = relative(root, file);
-    if (exceptions.has(rel)) continue;
+    if (rel === "404.html") continue;
     const html = readFileSync(file, "utf8");
     const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
     if (canonical && !sitemapUrls.includes(canonical)) {
       failures.push(`sitemap.xml: indexierbare Seite fehlt: ${canonical}`);
+    }
+  }
+}
+
+for (const file of htmlFiles) {
+  const rel = relative(root, file);
+  const html = readFileSync(file, "utf8");
+  for (const match of html.matchAll(/<img\b[^>]*>/gi)) {
+    const tag = match[0];
+    const alt = tag.match(/\salt="([^"]*)"/i)?.[1];
+    if (!alt?.trim()) {
+      failures.push(`${rel}: Bild ohne beschreibenden alt-Text: ${tag}`);
+    }
+  }
+  for (const match of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {
+    if (match[1].includes("SoftwareApplication")) {
+      failures.push(`${rel}: SoftwareApplication-Markup ohne sichtbare Bewertungen vermeiden.`);
     }
   }
 }

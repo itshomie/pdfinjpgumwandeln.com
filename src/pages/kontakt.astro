@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import EmailAddress from "../components/EmailAddress.astro";
 import { site } from "../data/pages";
 ---
 
@@ -7,7 +8,6 @@ import { site } from "../data/pages";
   title="Kontakt - PDF in JPG umwandeln"
   description="Kontakt zu pdfinjpgumwandeln.com. Hinweise und Supportanfragen bitte an die angegebene E-Mail-Adresse senden."
   canonicalPath="/kontakt/"
-  robots="noindex, follow"
 >
   <section class="simple-page">
     <h1>Kontakt</h1>
@@ -15,7 +15,7 @@ import { site } from "../data/pages";
       Für Fragen zum Werkzeug, Hinweise zu fehlerhaften Seiten oder allgemeine
       Rückmeldungen erreichen Sie uns per E-Mail.
     </p>
-    <p class="contact-email">{site.email}</p>
+    <p class="contact-email"><EmailAddress value={site.email} /></p>
     <p>
       Bitte beschreiben Sie bei technischen Problemen den verwendeten Browser,
       das Betriebssystem, den gewünschten Konvertierungsweg und die sichtbare
@@ -40,7 +40,7 @@ import { site } from "../data/pages";
       Sheridan, WY 82801, USA
     </p>
     <p>
-      E-Mail: support@registeredagentsinc.com<br />
+      E-Mail: <EmailAddress value="support@registeredagentsinc.com" /><br />
       Telefon: (307) 200-2803
     </p>
   </section>

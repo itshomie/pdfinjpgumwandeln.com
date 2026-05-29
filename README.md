@@ -31,8 +31,8 @@ Der Build führt `astro check`, `astro build` und `scripts/check-site.mjs` aus. 
 - mindestens 800 Wörter auf allen Ratgeberseiten, ausgenommen Datenschutz, Kontakt, Über uns und Impressum
 - eindeutige H1-Überschriften
 - vorhandene Canonical- und Description-Tags
-- `noindex, follow` für Support-/Policy-Seiten und keine solchen URLs in der Sitemap
+- indexierbare Support-/Policy-Seiten mit Aufnahme in die Sitemap
 - Slug passt zum jeweiligen Kernkeyword
 - keine sichtbaren deutschen Umschriften wie `fuer`, `waehlen` oder `pruefen`
 - Artikelähnlichkeit unter dem definierten Grenzwert
-- keine `mailto:`-Links
+- keine `mailto:`-Links und keine Cloudflare-E-Mail-Schutzlinks im HTML

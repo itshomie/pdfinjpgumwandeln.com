@@ -2,22 +2,24 @@ import { pathFor, site, type SeoPage } from "../data/pages";
 
 export function schemaForPage(page: SeoPage) {
   const path = pathFor(page);
-  const url = `${site.url}${path}`;
+  const url = new URL(path, site.url).toString();
+  const websiteUrl = new URL("/", site.url).toString();
   const schema: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: page.keyword,
-      description: page.description,
-      applicationCategory: "UtilitiesApplication",
-      operatingSystem: "Webbrowser",
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
       url,
+      name: page.title,
+      headline: page.keyword,
+      description: page.description,
       inLanguage: "de-DE",
-      isAccessibleForFree: true,
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "EUR"
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": `${websiteUrl}#website`,
+        name: site.name,
+        url: websiteUrl,
+        inLanguage: "de-DE"
       }
     }
   ];
@@ -31,7 +33,7 @@ export function schemaForPage(page: SeoPage) {
           "@type": "ListItem",
           position: 1,
           name: "Startseite",
-          item: site.url
+          item: websiteUrl
         },
         {
           "@type": "ListItem",

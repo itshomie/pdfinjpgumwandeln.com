@@ -20,8 +20,14 @@ const { page, home = false } = Astro.props;
       <a href="#ratgeber" class="button secondary">Anleitung lesen</a>
     </div>
   </div>
-  <div class="hero-visual" aria-hidden="true">
-    <img src="/assets/hero-conversion.png" alt="" loading={home ? "eager" : "lazy"} />
+  <div class="hero-visual">
+    <img
+      src="/assets/hero-conversion.jpg"
+      alt={`Browser-Konverter für ${page.keyword}`}
+      width="1200"
+      height="750"
+      loading={home ? "eager" : "lazy"}
+    />
   </div>
 </section>
 

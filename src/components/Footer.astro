@@ -1,5 +1,6 @@
 ---
 import { pageBySlug, pathFor, site } from "../data/pages";
+import EmailAddress from "./EmailAddress.astro";
 
 function footerLink(slug: string, label: string) {
   const page = pageBySlug(slug);
@@ -52,7 +53,7 @@ const legalLinks = [
       <p class="footer-brand">{site.name}</p>
       <p>
         Deutsches Browser-Werkzeug für PDF-, JPG-, SVG- und TIFF-Workflows.
-        Kontakt: {site.email}
+        Kontakt: <EmailAddress value={site.email} />
       </p>
     </div>
     <nav class="footer-nav" aria-label="Footer Navigation">

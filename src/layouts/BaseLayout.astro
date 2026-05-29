@@ -50,7 +50,7 @@ const ld = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={`${site.url}/assets/hero-conversion.png`} />
+    <meta property="og:image" content={`${site.url}/assets/hero-conversion.jpg`} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {ld.map((entry) => <script is:inline type="application/ld+json" set:html={JSON.stringify(entry)} />)}

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import EmailAddress from "../components/EmailAddress.astro";
 import { site } from "../data/pages";
 ---
 
@@ -7,7 +8,6 @@ import { site } from "../data/pages";
   title="Datenschutz - PDF in JPG umwandeln"
   description="Datenschutzhinweise für pdfinjpgumwandeln.com mit Fokus auf lokale Browser-Verarbeitung und Kontaktaufnahme."
   canonicalPath="/datenschutz/"
-  robots="noindex, follow"
 >
   <section class="simple-page legal-page">
     <h1>Datenschutz</h1>
@@ -21,7 +21,7 @@ import { site } from "../data/pages";
     <p>
       Wenn Sie uns kontaktieren, verarbeiten wir die von Ihnen übermittelten
       Angaben zur Bearbeitung der Anfrage. Die Kontaktadresse lautet:
-      {site.email}
+      <EmailAddress value={site.email} />
     </p>
     <h2>Serverdaten</h2>
     <p>
