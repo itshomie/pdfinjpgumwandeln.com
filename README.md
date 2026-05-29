@@ -1,14 +1,14 @@
 # PDF in JPG umwandeln
 
-Astro/React-Projekt fuer `pdfinjpgumwandeln.com`.
+Astro/React-Projekt für `pdfinjpgumwandeln.com`.
 
 ## Inhalt
 
-- Deutsche Startseite fuer `pdf in jpg umwandeln`
+- Deutsche Startseite für `pdf in jpg umwandeln`
 - 17 thematisch fokussierte Innenseiten nach Suchintention statt doppelter Keyword-Varianten
-- Statische HTML-Ausgabe mit Canonicals, Meta-Descriptions, FAQ- und Breadcrumb-Structured-Data
-- `_redirects` fuer entfernte Keyword-Varianten auf die passenden Canonical-Seiten
-- Browser-Werkzeuge fuer PDF zu JPG, JPG zu PDF, PDF zu SVG, PDF zu TIFF, SVG zu PDF, TIFF zu PDF sowie Vektor/EPS-Pruefung
+- Statische HTML-Ausgabe mit Canonicals, Meta-Descriptions und passendem Structured Data
+- `_redirects` für entfernte Keyword-Varianten auf die passenden Canonical-Seiten
+- Browser-Werkzeuge für PDF zu JPG, JPG zu PDF, PDF zu SVG, PDF zu TIFF, SVG zu PDF, TIFF zu PDF sowie Vektor/EPS-Prüfung
 - Kontaktadresse als reiner Text: `support@pdfinjpgumwandeln.com`
 
 ## Entwicklung
@@ -20,15 +20,19 @@ npm install
 npm run dev
 ```
 
-## Pruefung und Build
+## Prüfung und Build
 
 ```bash
 npm run build
 ```
 
-Der Build fuehrt `astro check`, `astro build` und `scripts/check-site.mjs` aus. Der Check prueft unter anderem:
+Der Build führt `astro check`, `astro build` und `scripts/check-site.mjs` aus. Der Check prüft unter anderem:
 
-- mindestens 800 Woerter auf allen Ratgeberseiten, ausgenommen Datenschutz, Kontakt, Über uns und Impressum
-- eindeutige H1-Ueberschriften
+- mindestens 800 Wörter auf allen Ratgeberseiten, ausgenommen Datenschutz, Kontakt, Über uns und Impressum
+- eindeutige H1-Überschriften
 - vorhandene Canonical- und Description-Tags
+- `noindex, follow` für Support-/Policy-Seiten und keine solchen URLs in der Sitemap
+- Slug passt zum jeweiligen Kernkeyword
+- keine sichtbaren deutschen Umschriften wie `fuer`, `waehlen` oder `pruefen`
+- Artikelähnlichkeit unter dem definierten Grenzwert
 - keine `mailto:`-Links

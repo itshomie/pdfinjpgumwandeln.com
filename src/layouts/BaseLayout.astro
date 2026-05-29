@@ -9,9 +9,16 @@ interface Props {
   description: string;
   canonicalPath?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  robots?: string;
 }
 
-const { title, description, canonicalPath = Astro.url.pathname, jsonLd = [] } = Astro.props;
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  jsonLd = [],
+  robots = "index, follow, max-image-preview:large"
+} = Astro.props;
 const canonical = new URL(canonicalPath, site.url).toString();
 const ld = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 ---
@@ -19,21 +26,12 @@ const ld = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 <!doctype html>
 <html lang="de">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-K3FJG1HMVP"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-K3FJG1HMVP');
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content={robots} />
     <meta name="theme-color" content="#0f766e" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />

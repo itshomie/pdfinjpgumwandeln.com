@@ -47,32 +47,32 @@ export const homePage: SeoPage = {
   slug: "",
   title: "PDF in JPG umwandeln - kostenlos im Browser",
   description:
-    "PDF in JPG umwandeln fuer deutsche Nutzer: lokale Browser-Konvertierung, klare Qualitaetseinstellungen und praktische Anleitungen fuer Windows, Mac und Handy.",
+    "PDF in JPG umwandeln für deutsche Nutzer: lokale Browser-Konvertierung, klare Qualitätseinstellungen und praktische Anleitungen für Windows, Mac und Handy.",
   group: "pdf-jpg",
   toolMode: "pdf-to-jpg",
   audience: "deutsche Nutzer, die PDF-Seiten schnell als JPG-Bilder speichern wollen",
   intent: "eine PDF-Datei ohne Installation in gut lesbare JPG-Dateien umwandeln",
   angle:
-    "Die Startseite verbindet ein direkt nutzbares Werkzeug mit einem verstaendlichen Format-Ratgeber, damit Besucher sofort konvertieren und danach die passende Detailseite finden.",
+    "Die Startseite verbindet ein direkt nutzbares Werkzeug mit einem verständlichen Format-Ratgeber, damit Besucher sofort konvertieren und danach die passende Detailseite finden.",
   scenario:
-    "Typisch ist eine Rechnung, Praesentation, Scan-Datei oder ein PDF-Formular, das in einem Shop, Messenger, CMS oder Bildarchiv als einzelne Bilddatei gebraucht wird.",
+    "Typisch ist eine Rechnung, Präsentation, Scan-Datei oder ein PDF-Formular, das in einem Shop, Messenger, CMS oder Bildarchiv als einzelne Bilddatei gebraucht wird.",
   qualityFocus:
-    "Die entscheidenden Stellschrauben sind Seitenauflosung, JPEG-Qualitaet, klare Dateinamen und die Frage, ob alle Seiten oder nur die erste Seite exportiert werden sollen.",
+    "Die entscheidenden Stellschrauben sind Seitenauflösung, JPEG-Qualität, klare Dateinamen und die Frage, ob alle Seiten oder nur die erste Seite exportiert werden sollen.",
   privacyFocus:
-    "Die Datei wird im Browser verarbeitet. Das ist besonders fuer vertrauliche Unterlagen wichtig, weil kein Upload an einen fremden Konvertierungsserver vorgesehen ist.",
+    "Die Datei wird im Browser verarbeitet. Das ist besonders für vertrauliche Unterlagen wichtig, weil kein Upload an einen fremden Konvertierungsserver vorgesehen ist.",
   workflow:
-    "Besucher laden eine PDF-Datei, waehlen Skalierung und Qualitaet, starten die Umwandlung und erhalten bei mehreren Seiten automatisch ein ZIP-Paket.",
+    "Besucher laden eine PDF-Datei, wählen Skalierung und Qualität, starten die Umwandlung und erhalten bei mehreren Seiten automatisch ein ZIP-Paket.",
   pitfalls: [
-    "Zu niedrige Aufloesung macht kleine Schrift in der JPG-Datei unscharf.",
-    "Ein einzelnes JPG ersetzt kein mehrseitiges Dokument, wenn die Reihenfolge spaeter nachvollziehbar bleiben muss.",
-    "Sehr grosse PDFs koennen auf alten Handys laenger rendern als auf einem Desktop."
+    "Zu niedrige Auflösung macht kleine Schrift in der JPG-Datei unscharf.",
+    "Ein einzelnes JPG ersetzt kein mehrseitiges Dokument, wenn die Reihenfolge später nachvollziehbar bleiben muss.",
+    "Sehr große PDFs können auf alten Handys länger rendern als auf einem Desktop."
   ],
   steps: [
-    "PDF auswaehlen oder in die Upload-Flaeche ziehen.",
-    "Aufloesung passend zum Ziel waehlen: Vorschau, Web oder Druck.",
-    "Alle Seiten oder nur die benoetigten Seiten exportieren.",
-    "JPG-Dateien herunterladen und vor dem Teilen kurz oeffnen.",
-    "Bei vielen Seiten das ZIP entpacken und die Dateinamen pruefen."
+    "PDF auswählen oder in die Upload-Fläche ziehen.",
+    "Auflösung passend zum Ziel wählen: Vorschau, Web oder Druck.",
+    "Alle Seiten oder nur die benötigten Seiten exportieren.",
+    "JPG-Dateien herunterladen und vor dem Teilen kurz öffnen.",
+    "Bei vielen Seiten das ZIP entpacken und die Dateinamen prüfen."
   ],
   related: [
     "pdf-in-jpg-umwandeln-online",
@@ -88,30 +88,30 @@ export const seoPages: SeoPage[] = [
     slug: "pdf-in-jpg-umwandeln-online",
     title: "PDF in JPG umwandeln online - schnell und lokal",
     description:
-      "PDF in JPG umwandeln online: Web-Werkzeug mit lokalem Rendern, Qualitaetsreglern und ZIP-Ausgabe fuer mehrseitige PDFs.",
+      "PDF in JPG umwandeln online: Web-Werkzeug mit lokalem Rendern, Qualitätsreglern und ZIP-Ausgabe für mehrseitige PDFs.",
     group: "online",
     toolMode: "pdf-to-jpg",
     audience: "Nutzer, die ohne Installation direkt im Browser arbeiten wollen",
     intent: "PDF-Seiten online erreichbar in JPG-Dateien umwandeln",
     angle:
-      "Diese Seite ist die allgemeine Online-Variante und erklaert den Unterschied zwischen Bedienung im Web und Dateiverarbeitung auf dem eigenen Geraet.",
+      "Diese Seite ist die allgemeine Online-Variante und erklärt den Unterschied zwischen Bedienung im Web und Dateiverarbeitung auf dem eigenen Gerät.",
     scenario:
       "Die Umwandlung wird oft zwischen zwei Online-Schritten gebraucht: PDF herunterladen, JPG erzeugen, JPG wieder in ein Portal oder CMS hochladen.",
     qualityFocus:
-      "Ein sichtbarer Qualitaetsregler hilft, den Export an Webvorschau, Archiv oder drucknahe Nutzung anzupassen.",
+      "Ein sichtbarer Qualitätsregler hilft, den Export an Webvorschau, Archiv oder drucknahe Nutzung anzupassen.",
     privacyFocus:
       "Lokales Browser-Rendering reduziert das Risiko, dass Dokumente auf Servern fremder Anbieter zwischengespeichert werden.",
     workflow:
-      "Die Seite oeffnen, PDF auswaehlen, Konvertierung starten und die entstandenen JPG-Dateien herunterladen.",
+      "Die Seite öffnen, PDF auswählen, Konvertierung starten und die entstandenen JPG-Dateien herunterladen.",
     pitfalls: [
-      "Online-Konverter ohne klare Datenschutzinfo sind fuer sensible PDFs ungeeignet.",
+      "Online-Konverter ohne klare Datenschutzinfo sind für sensible PDFs ungeeignet.",
       "Ein Ergebnis ohne Seitenzahlen kann bei mehrseitigen Dokumenten verwirrend sein.",
-      "Bei schlechter Verbindung sollte der Prozess nicht von Uploads abhaengen."
+      "Bei schlechter Verbindung sollte der Prozess nicht von Uploads abhängen."
     ],
     steps: [
-      "Browser oeffnen.",
-      "PDF-Datei auswaehlen.",
-      "Qualitaet einstellen.",
+      "Browser öffnen.",
+      "PDF-Datei auswählen.",
+      "Qualität einstellen.",
       "JPG-Ausgabe starten.",
       "Download speichern und kontrollieren."
     ],
@@ -127,7 +127,7 @@ export const seoPages: SeoPage[] = [
     slug: "pdf-in-jpg-umwandeln-windows",
     title: "PDF in JPG umwandeln Windows - ohne Zusatzprogramm",
     description:
-      "PDF in JPG umwandeln Windows: Browser-Workflow fuer Windows 10 und 11, inklusive Dateiablage, ZIP-Download und Qualitaetstipps.",
+      "PDF in JPG umwandeln Windows: Browser-Workflow für Windows 10 und 11, inklusive Dateiablage, ZIP-Download und Qualitätstipps.",
     group: "platform",
     toolMode: "pdf-to-jpg",
     audience: "Windows-Nutzer, die PDFs ohne neue Desktop-Software als JPG speichern wollen, egal ob Windows 10 oder Windows 11",
@@ -135,24 +135,24 @@ export const seoPages: SeoPage[] = [
     angle:
       "Die Seite ist auf den Windows-Alltag ausgelegt: Downloads-Ordner, Explorer, ZIP-Dateien, Edge oder Chrome und typische Upload-Portale unter Windows 10 und 11.",
     scenario:
-      "Ein PDF liegt auf dem Desktop oder im Download-Ordner und soll als JPG in eine Webanwendung, ein Office-Dokument oder eine E-Mail eingefuegt werden.",
+      "Ein PDF liegt auf dem Desktop oder im Download-Ordner und soll als JPG in eine Webanwendung, ein Office-Dokument oder eine E-Mail eingefügt werden.",
     qualityFocus:
-      "Windows zeigt Bildabmessungen im Explorer schnell an. Das hilft, nach der Konvertierung zu pruefen, ob die JPG-Datei gross genug fuer den Zielzweck ist.",
+      "Windows zeigt Bildabmessungen im Explorer schnell an. Das hilft, nach der Konvertierung zu prüfen, ob die JPG-Datei groß genug für den Zielzweck ist.",
     privacyFocus:
-      "Gerade auf Arbeitsrechnern ist eine browserbasierte Loesung praktisch, weil keine Adminrechte fuer eine Installation erforderlich sind und die Datei lokal bleibt.",
+      "Gerade auf Arbeitsrechnern ist eine browserbasierte Lösung praktisch, weil keine Adminrechte für eine Installation erforderlich sind und die Datei lokal bleibt.",
     workflow:
-      "PDF im Browser auswaehlen, JPGs exportieren, ZIP im Explorer entpacken und die Bilder in der Zielanwendung verwenden.",
+      "PDF im Browser auswählen, JPGs exportieren, ZIP im Explorer entpacken und die Bilder in der Zielanwendung verwenden.",
     pitfalls: [
       "Windows versteckt Dateiendungen manchmal, wodurch JPG und PDF verwechselt werden.",
-      "Der Downloads-Ordner wird schnell unuebersichtlich, wenn viele Seiten exportiert werden.",
-      "Aeltere Rechner koennen grosse PDFs langsamer rendern."
+      "Der Downloads-Ordner wird schnell unübersichtlich, wenn viele Seiten exportiert werden.",
+      "Ältere Rechner können große PDFs langsamer rendern."
     ],
     steps: [
-      "Browser unter Windows oeffnen.",
-      "PDF aus Desktop, Dokumente oder Downloads waehlen.",
-      "Qualitaet einstellen.",
+      "Browser unter Windows öffnen.",
+      "PDF aus Desktop, Dokumente oder Downloads wählen.",
+      "Qualität einstellen.",
       "ZIP oder JPG herunterladen.",
-      "Im Explorer entpacken und Dateiendungen pruefen."
+      "Im Explorer entpacken und Dateiendungen prüfen."
     ],
     related: [
       "pdf-in-jpg-umwandeln-mac",
@@ -166,31 +166,31 @@ export const seoPages: SeoPage[] = [
     slug: "pdf-in-jpg-umwandeln-mac",
     title: "PDF in JPG umwandeln Mac - mehrere Seiten sauber exportieren",
     description:
-      "PDF in JPG umwandeln Mac: Anleitung fuer macOS, Browser-Tool und Hinweise zu Vorschau, Finder, Safari und JPG-Qualitaet.",
+      "PDF in JPG umwandeln Mac: Anleitung für macOS, Browser-Tool und Hinweise zu Vorschau, Finder, Safari und JPG-Qualität.",
     group: "platform",
     toolMode: "pdf-to-jpg",
-    audience: "Mac-Nutzer, die eine praktische Alternative oder Ergaenzung zur Vorschau-App suchen",
+    audience: "Mac-Nutzer, die eine praktische Alternative oder Ergänzung zur Vorschau-App suchen",
     intent: "auf macOS PDFs als JPG exportieren, besonders wenn mehrere Seiten betroffen sind",
     angle:
-      "Der Fokus liegt auf einem Mac-Workflow, der nicht an einer einzelnen App haengt: PDF im Finder, Browser-Tool fuer den Export, Ergebnis im Download-Ordner.",
+      "Der Fokus liegt auf einem Mac-Workflow, der nicht an einer einzelnen App hängt: PDF im Finder, Browser-Tool für den Export, Ergebnis im Download-Ordner.",
     scenario:
-      "Das PDF kommt aus Mail, iCloud Drive oder einem Download und soll als Bild in eine Webseite, Praesentation oder Kundennachricht eingefuegt werden.",
+      "Das PDF kommt aus Mail, iCloud Drive oder einem Download und soll als Bild in eine Webseite, Präsentation oder Kundennachricht eingefügt werden.",
     qualityFocus:
-      "Mac-Displays kaschieren niedrige Aufloesung. Die Seite empfiehlt deshalb, exportierte JPGs bei 100 Prozent oder in der Zielanwendung zu pruefen.",
+      "Mac-Displays kaschieren niedrige Auflösung. Die Seite empfiehlt deshalb, exportierte JPGs bei 100 Prozent oder in der Zielanwendung zu prüfen.",
     privacyFocus:
-      "Mit lokaler Verarbeitung bleiben PDFs aus iCloud Drive, Mail oder Kundenprojekten auf dem Geraet, solange der Nutzer sie nicht aktiv weitergibt.",
+      "Mit lokaler Verarbeitung bleiben PDFs aus iCloud Drive, Mail oder Kundenprojekten auf dem Gerät, solange der Nutzer sie nicht aktiv weitergibt.",
     workflow:
-      "Datei im Finder finden, im Browser auswaehlen, Export starten, ZIP entpacken und JPGs in der Ziel-App verwenden.",
+      "Datei im Finder finden, im Browser auswählen, Export starten, ZIP entpacken und JPGs in der Ziel-App verwenden.",
     pitfalls: [
       "Vorschau exportiert komfortabel einzelne Seiten, aber nicht immer ganze Stapel.",
-      "Download-Orte in Safari und Chrome koennen unterschiedlich eingestellt sein.",
+      "Download-Orte in Safari und Chrome können unterschiedlich eingestellt sein.",
       "Dateien aus iCloud werden vor dem Export eventuell erst lokal geladen."
     ],
     steps: [
       "PDF im Finder oder aus Downloads bereitlegen.",
-      "Browser-Tool oeffnen.",
+      "Browser-Tool öffnen.",
       "PDF laden.",
-      "Alle benoetigten Seiten als JPG exportieren.",
+      "Alle benötigten Seiten als JPG exportieren.",
       "JPG-Dateien im Finder kontrollieren."
     ],
     related: [
@@ -205,7 +205,7 @@ export const seoPages: SeoPage[] = [
     slug: "pdf-in-jpg-umwandeln-handy",
     title: "PDF in JPG umwandeln Handy - mobil als Bild speichern",
     description:
-      "PDF in JPG umwandeln Handy: PDF-Seiten auf Smartphone oder Tablet lokal im Browser als JPG speichern, mit Tipps fuer Lesbarkeit und Download.",
+      "PDF in JPG umwandeln Handy: PDF-Seiten auf Smartphone oder Tablet lokal im Browser als JPG speichern, mit Tipps für Lesbarkeit und Download.",
     group: "platform",
     toolMode: "pdf-to-jpg",
     audience: "Handy-Nutzer, die PDF-Seiten ohne App-Installation als JPG-Bilder speichern wollen",
@@ -215,22 +215,22 @@ export const seoPages: SeoPage[] = [
     scenario:
       "Typisch ist ein PDF aus Mail, Messenger, Cloud-Speicher oder einem Portal, das als Bild in eine Anzeige, ein Formular, einen Chat oder ein CMS hochgeladen werden soll.",
     qualityFocus:
-      "Auf dem Handy ist Lesbarkeit wichtiger als maximale Dateigroesse. Kleine Schrift, Stempel und Tabellen sollten nach dem Export in der Bildvorschau geprueft werden.",
+      "Auf dem Handy ist Lesbarkeit wichtiger als maximale Dateigröße. Kleine Schrift, Stempel und Tabellen sollten nach dem Export in der Bildvorschau geprüft werden.",
     privacyFocus:
       "Eine lokale Browser-Konvertierung ist besonders am Handy sinnvoll, weil keine unbekannte App Zugriff auf Dokumente, Galerie oder Cloud-Ordner braucht.",
     workflow:
-      "PDF am Smartphone auswaehlen, Skalierung bewusst setzen, JPG exportieren, Download oeffnen und erst danach teilen oder hochladen.",
+      "PDF am Smartphone auswählen, Skalierung bewusst setzen, JPG exportieren, Download öffnen und erst danach teilen oder hochladen.",
     pitfalls: [
       "Mobile Browser haben weniger Arbeitsspeicher als Desktop-Rechner.",
       "Downloads sind auf iOS und Android nicht immer an derselben Stelle sichtbar.",
-      "Sehr kleine Vorschauen koennen lesbar wirken, obwohl die JPG-Datei im Zielportal unscharf erscheint."
+      "Sehr kleine Vorschauen können lesbar wirken, obwohl die JPG-Datei im Zielportal unscharf erscheint."
     ],
     steps: [
-      "PDF aus Dateien, Downloads oder Cloud-Speicher auswaehlen.",
-      "Skalierung fuer kleine Schrift etwas hoeher setzen.",
+      "PDF aus Dateien, Downloads oder Cloud-Speicher auswählen.",
+      "Skalierung für kleine Schrift etwas höher setzen.",
       "Konvertierung starten.",
-      "JPG im Download-Ordner oder Teilen-Dialog oeffnen.",
-      "Bild im Zielportal pruefen, bevor es abgeschickt wird."
+      "JPG im Download-Ordner oder Teilen-Dialog öffnen.",
+      "Bild im Zielportal prüfen, bevor es abgeschickt wird."
     ],
     related: [
       "pdf-in-jpg-umwandeln-online",
@@ -242,31 +242,31 @@ export const seoPages: SeoPage[] = [
   {
     keyword: "pdf in bilddatei umwandeln",
     slug: "pdf-in-bilddatei-umwandeln",
-    title: "PDF in Bilddatei umwandeln - JPG, TIFF oder SVG waehlen",
+    title: "PDF in Bilddatei umwandeln - JPG, TIFF oder SVG wählen",
     description:
-      "PDF in Bilddatei umwandeln: Unterschiede zwischen JPG, TIFF und SVG verstehen und die passende Ausgabe fuer den Zweck waehlen.",
+      "PDF in Bilddatei umwandeln: Unterschiede zwischen JPG, TIFF und SVG verstehen und die passende Ausgabe für den Zweck wählen.",
     group: "pdf-jpg",
     toolMode: "pdf-to-jpg",
     audience: "Nutzer, die noch nicht sicher sind, welches Bildformat aus einem PDF entstehen soll",
-    intent: "PDF-Inhalte als Bilddatei verwenden und das richtige Zielformat auswaehlen",
+    intent: "PDF-Inhalte als Bilddatei verwenden und das richtige Zielformat auswählen",
     angle:
-      "Diese Seite ist der Format-Kompass. Sie erklaert, wann JPG, TIFF oder SVG sinnvoll ist, statt jeden Fall automatisch als JPG zu behandeln.",
+      "Diese Seite ist der Format-Kompass. Sie erklärt, wann JPG, TIFF oder SVG sinnvoll ist, statt jeden Fall automatisch als JPG zu behandeln.",
     scenario:
-      "Ein PDF soll in eine Webseite, ein Archiv, eine Praesentation, ein Shop-System oder eine Druckvorstufe uebernommen werden.",
+      "Ein PDF soll in eine Webseite, ein Archiv, eine Präsentation, ein Shop-System oder eine Druckvorstufe übernommen werden.",
     qualityFocus:
-      "JPG ist praktisch fuer Web und Fotos, TIFF fuer bestimmte Archiv- und Druckprozesse, SVG fuer Webeinbettung oder Vektor-nahe Workflows.",
+      "JPG ist praktisch für Web und Fotos, TIFF für bestimmte Archiv- und Druckprozesse, SVG für Webeinbettung oder Vektor-nahe Workflows.",
     privacyFocus:
       "Da die Wahl des Formats oft vor der Weitergabe steht, ist lokale Verarbeitung ein guter Zwischenschritt.",
     workflow:
-      "Zuerst wird der Zweck geklaert, danach wird das passende Ausgabeformat mit dem Werkzeug oder der verlinkten Spezialseite erzeugt.",
+      "Zuerst wird der Zweck geklärt, danach wird das passende Ausgabeformat mit dem Werkzeug oder der verlinkten Spezialseite erzeugt.",
     pitfalls: [
-      "JPG ist nicht ideal fuer Transparenz oder echte Vektoren.",
-      "TIFF kann fuer normale Web-Uploads zu gross sein.",
+      "JPG ist nicht ideal für Transparenz oder echte Vektoren.",
+      "TIFF kann für normale Web-Uploads zu groß sein.",
       "SVG aus einem PDF ist nicht automatisch eine echte Vektordatei."
     ],
     steps: [
-      "Zielsystem pruefen.",
-      "Format auswaehlen.",
+      "Zielsystem prüfen.",
+      "Format auswählen.",
       "PDF-Datei laden.",
       "Bilddatei erzeugen.",
       "Ergebnis im Zielsystem testen."
@@ -286,28 +286,28 @@ export const seoPages: SeoPage[] = [
       "JPG in PDF umwandeln: aus einem oder mehreren Bildern ein sauberes PDF erstellen, inklusive Reihenfolge, Seitenformat und Handy-Tipps.",
     group: "jpg-pdf",
     toolMode: "jpg-to-pdf",
-    audience: "Nutzer, die aus Fotos, Scans oder Screenshots ein zusammenhaengendes PDF bauen wollen",
+    audience: "Nutzer, die aus Fotos, Scans oder Screenshots ein zusammenhängendes PDF bauen wollen",
     intent: "JPG-Dateien in ein PDF packen, damit Versand, Archivierung und Upload einfacher werden",
     angle:
       "Der Blick geht hier in die Gegenrichtung: Lose Bilddateien werden zu einem geordneten Dokument mit Seitenfolge, statt als einzelne Uploads verteilt zu bleiben.",
     scenario:
       "Typisch sind fotografierte Quittungen, Ausweis-Kopien, unterschriebene Formulare, Hausaufgaben, Bewerbungsanlagen oder mehrere Screenshot-Seiten, die ein Portal nur als PDF akzeptiert.",
     qualityFocus:
-      "Das Ergebnis haengt weniger von einer abstrakten DPI-Zahl ab als von der Bildschaerfe, dem Seitenformat und der Reihenfolge. Ein sauber zugeschnittenes JPG ergibt ein deutlich besseres PDF.",
+      "Das Ergebnis hängt weniger von einer abstrakten DPI-Zahl ab als von der Bildschärfe, dem Seitenformat und der Reihenfolge. Ein sauber zugeschnittenes JPG ergibt ein deutlich besseres PDF.",
     privacyFocus:
       "Fotos von Ausweisen oder Rechnungen enthalten sensible Details. Eine lokale Umwandlung vermeidet, dass diese Bilder vor dem PDF-Export an Dritte gesendet werden.",
     workflow:
       "Die Bilder werden sortiert, bei Bedarf automatisch auf eigene PDF-Seiten gesetzt und danach als eine Datei gespeichert.",
     pitfalls: [
       "Unscharfe Handyfotos bleiben auch im PDF unscharf.",
-      "Falsch sortierte JPGs erzeugen ein PDF, das spaeter schwer zu korrigieren ist.",
-      "Sehr grosse Fotos koennen ein PDF unnoetig aufblaehen, obwohl der Inhalt nur Text zeigt."
+      "Falsch sortierte JPGs erzeugen ein PDF, das später schwer zu korrigieren ist.",
+      "Sehr große Fotos können ein PDF unnötig aufblähen, obwohl der Inhalt nur Text zeigt."
     ],
     steps: [
-      "JPG-Dateien auswaehlen und die Reihenfolge pruefen.",
+      "JPG-Dateien auswählen und die Reihenfolge prüfen.",
       "Bei Bedarf mehrere Bilder gleichzeitig laden.",
       "PDF erzeugen und die Seitenansicht kontrollieren.",
-      "Dateigroesse mit dem Zielportal abgleichen.",
+      "Dateigröße mit dem Zielportal abgleichen.",
       "Fertiges PDF herunterladen und archivieren."
     ],
     related: [
@@ -325,29 +325,29 @@ export const seoPages: SeoPage[] = [
       "Mehrere JPG in PDF umwandeln: Bilder in Reihenfolge bringen, als mehrseitiges PDF speichern und typische Upload-Probleme vermeiden.",
     group: "jpg-pdf",
     toolMode: "jpg-to-pdf",
-    audience: "Nutzer, die mehrere Fotos oder Scans in einer einzigen PDF-Datei buendeln wollen",
+    audience: "Nutzer, die mehrere Fotos oder Scans in einer einzigen PDF-Datei bündeln wollen",
     intent: "aus vielen einzelnen JPG-Dateien ein geordnetes mehrseitiges PDF erstellen",
     angle:
       "Der Schwerpunkt dieser Seite liegt auf Ordnung: Reihenfolge, Seitenformat und klare Benennung sind wichtiger als ein einzelner schneller Export.",
     scenario:
-      "Sehr haeufig geht es um Belege fuer Steuer, Versicherung oder Reisekosten, um Schulaufgaben, Bewerbungsanlagen oder Fotos einer unterschriebenen Vertragsseite.",
+      "Sehr häufig geht es um Belege für Steuer, Versicherung oder Reisekosten, um Schulaufgaben, Bewerbungsanlagen oder Fotos einer unterschriebenen Vertragsseite.",
     qualityFocus:
-      "Ein gutes PDF aus mehreren JPGs nutzt jede Bilddatei als eigene Seite und vermeidet unnoetige Skalierung, die Text verschlechtert.",
+      "Ein gutes PDF aus mehreren JPGs nutzt jede Bilddatei als eigene Seite und vermeidet unnötige Skalierung, die Text verschlechtert.",
     privacyFocus:
-      "Mehrere Belege oder Ausweiskopien enthalten oft zusammen noch mehr persoenliche Informationen als ein einzelnes Bild. Lokale Verarbeitung ist deshalb besonders sinnvoll.",
+      "Mehrere Belege oder Ausweiskopien enthalten oft zusammen noch mehr persönliche Informationen als ein einzelnes Bild. Lokale Verarbeitung ist deshalb besonders sinnvoll.",
     workflow:
       "Bilder werden gesammelt, sortiert, in ein Seitenformat gebracht und als ein PDF heruntergeladen.",
     pitfalls: [
-      "Dateinamen wie IMG_1001 und IMG_0999 fuehren schnell zu falscher Reihenfolge.",
-      "Querformat und Hochformat gemischt koennen die Lesbarkeit stoeren.",
-      "Zu grosse Handyfotos blaehen das PDF ohne sichtbaren Nutzen auf."
+      "Dateinamen wie IMG_1001 und IMG_0999 führen schnell zu falscher Reihenfolge.",
+      "Querformat und Hochformat gemischt können die Lesbarkeit stören.",
+      "Zu große Handyfotos blähen das PDF ohne sichtbaren Nutzen auf."
     ],
     steps: [
-      "Alle JPG-Dateien gleichzeitig auswaehlen.",
-      "Reihenfolge anhand der Dateiliste pruefen.",
+      "Alle JPG-Dateien gleichzeitig auswählen.",
+      "Reihenfolge anhand der Dateiliste prüfen.",
       "PDF-Erstellung starten.",
       "Mehrseitiges PDF herunterladen.",
-      "Vor dem Upload alle Seiten kurz durchblaettern."
+      "Vor dem Upload alle Seiten kurz durchblättern."
     ],
     related: [
       "jpg-in-pdf-umwandeln",
@@ -361,32 +361,32 @@ export const seoPages: SeoPage[] = [
     slug: "jpg-in-pdf-umwandeln-handy",
     title: "JPG in PDF umwandeln Handy - Fotos als PDF senden",
     description:
-      "JPG in PDF umwandeln Handy: Fotos und Scans direkt am Smartphone zu einem PDF machen, mit Tipps fuer Schaerfe und Reihenfolge.",
+      "JPG in PDF umwandeln Handy: Fotos und Scans direkt am Smartphone zu einem PDF machen, mit Tipps für Schärfe und Reihenfolge.",
     group: "jpg-pdf",
     toolMode: "jpg-to-pdf",
-    audience: "Handy-Nutzer, die Fotos, Screenshots oder Scans als PDF verschicken muessen",
+    audience: "Handy-Nutzer, die Fotos, Screenshots oder Scans als PDF verschicken müssen",
     intent: "auf dem Smartphone aus einem oder mehreren JPG-Bildern ein PDF erstellen",
     angle:
-      "Hier steht nicht der Desktop im Mittelpunkt, sondern die Realitaet auf dem Handy: Kamera, Galerie, mobile Browser und Portale mit Dateigroessenlimit.",
+      "Hier steht nicht der Desktop im Mittelpunkt, sondern die Realität auf dem Handy: Kamera, Galerie, mobile Browser und Portale mit Dateigrößenlimit.",
     scenario:
       "Ein unterschriebenes Formular, eine Quittung, ein Ausweisfoto oder mehrere Seiten einer Aufgabe wurden fotografiert und sollen als eine PDF-Datei per Mail oder Upload eingereicht werden.",
     qualityFocus:
-      "Am Handy entscheidet die Aufnahmequalitaet. Gutes Licht, gerade Kanten und ein ruhiger Ausschnitt sind wichtiger als spaetere Nachbearbeitung.",
+      "Am Handy entscheidet die Aufnahmequalität. Gutes Licht, gerade Kanten und ein ruhiger Ausschnitt sind wichtiger als spätere Nachbearbeitung.",
     privacyFocus:
-      "Wenn Fotos persoenliche Daten zeigen, sollte die Umwandlung nicht ueber eine unbekannte App mit Zugriff auf die ganze Galerie laufen.",
+      "Wenn Fotos persönliche Daten zeigen, sollte die Umwandlung nicht über eine unbekannte App mit Zugriff auf die ganze Galerie laufen.",
     workflow:
-      "Bilder auswaehlen, Reihenfolge pruefen, PDF erzeugen und direkt aus dem Download-Ordner oder Teilen-Dialog weitergeben.",
+      "Bilder auswählen, Reihenfolge prüfen, PDF erzeugen und direkt aus dem Download-Ordner oder Teilen-Dialog weitergeben.",
     pitfalls: [
       "Verwackelte Fotos bleiben im PDF schlecht lesbar.",
-      "Mobile Browser koennen sehr grosse Bildserien langsamer verarbeiten.",
+      "Mobile Browser können sehr große Bildserien langsamer verarbeiten.",
       "Hoch- und Querformat gemischt wirkt bei Formularen schnell unprofessionell."
     ],
     steps: [
-      "Fotos in der Galerie pruefen und unscharfe Bilder aussortieren.",
-      "JPG-Dateien im Tool auswaehlen.",
+      "Fotos in der Galerie prüfen und unscharfe Bilder aussortieren.",
+      "JPG-Dateien im Tool auswählen.",
       "Reihenfolge vor dem Export kontrollieren.",
       "PDF erzeugen.",
-      "Datei oeffnen und erst danach versenden."
+      "Datei öffnen und erst danach versenden."
     ],
     related: [
       "jpg-in-pdf-umwandeln",
@@ -400,30 +400,30 @@ export const seoPages: SeoPage[] = [
     slug: "jpg-in-pdf-umwandeln-windows",
     title: "JPG in PDF umwandeln Windows - Bilder als PDF speichern",
     description:
-      "JPG in PDF umwandeln Windows: praktische Wege mit Browser, Explorer und Druckdialog, passend fuer Windows 10 und Windows 11.",
+      "JPG in PDF umwandeln Windows: praktische Wege mit Browser, Explorer und Druckdialog, passend für Windows 10 und Windows 11.",
     group: "platform",
     toolMode: "jpg-to-pdf",
-    audience: "Windows-Nutzer, die Bilder in ein PDF umwandeln muessen",
+    audience: "Windows-Nutzer, die Bilder in ein PDF umwandeln müssen",
     intent: "JPG-Dateien unter Windows als PDF speichern oder zusammenfassen",
     angle:
       "Die Seite verbindet Windows-Bordmittel mit dem Browser-Tool. So kann der Nutzer entscheiden, ob ein einzelnes Bild reicht oder ein geordnetes Mehrseiten-PDF gebraucht wird.",
     scenario:
       "Fotos aus dem Smartphone liegen im Explorer, mehrere Scans wurden heruntergeladen oder Screenshots sollen als eine PDF-Anlage verschickt werden.",
     qualityFocus:
-      "Windows zeigt Bildgroessen im Explorer. Vor dem PDF-Export lohnt sich ein kurzer Blick, ob die Aufnahmen scharf und richtig gedreht sind.",
+      "Windows zeigt Bildgrößen im Explorer. Vor dem PDF-Export lohnt sich ein kurzer Blick, ob die Aufnahmen scharf und richtig gedreht sind.",
     privacyFocus:
-      "Bilder mit privaten Daten bleiben beim lokalen Browser-Export auf dem Rechner und muessen nicht erst an eine Online-App gesendet werden.",
+      "Bilder mit privaten Daten bleiben beim lokalen Browser-Export auf dem Rechner und müssen nicht erst an eine Online-App gesendet werden.",
     workflow:
-      "Bilder im Explorer sortieren, im Browser laden, als PDF erzeugen und danach im Standard-PDF-Viewer pruefen.",
+      "Bilder im Explorer sortieren, im Browser laden, als PDF erzeugen und danach im Standard-PDF-Viewer prüfen.",
     pitfalls: [
-      "Der Windows-Druckdialog kann Seitenraender erzeugen, die nicht gewuenscht sind.",
-      "Falsch gedrehte Bilder werden im PDF stoerend sichtbar.",
-      "Viele Fotos in Originalgroesse machen ein sehr grosses PDF."
+      "Der Windows-Druckdialog kann Seitenränder erzeugen, die nicht gewünscht sind.",
+      "Falsch gedrehte Bilder werden im PDF störend sichtbar.",
+      "Viele Fotos in Originalgröße machen ein sehr großes PDF."
     ],
     steps: [
       "JPGs im Explorer sammeln.",
-      "Reihenfolge und Drehung pruefen.",
-      "Bilder im Tool auswaehlen.",
+      "Reihenfolge und Drehung prüfen.",
+      "Bilder im Tool auswählen.",
       "PDF erstellen.",
       "PDF mit Edge oder einem Viewer kontrollieren."
     ],
@@ -437,7 +437,7 @@ export const seoPages: SeoPage[] = [
   {
     keyword: "jpg in pdf umwandeln mac",
     slug: "jpg-in-pdf-umwandeln-mac",
-    title: "JPG in PDF umwandeln Mac - Bilder auf macOS buendeln",
+    title: "JPG in PDF umwandeln Mac - Bilder auf macOS bündeln",
     description:
       "JPG in PDF umwandeln Mac: Fotos und Scans unter macOS als PDF speichern, mit Finder-, Vorschau- und Browser-Tipps.",
     group: "platform",
@@ -445,24 +445,24 @@ export const seoPages: SeoPage[] = [
     audience: "Mac-Nutzer, die mehrere JPGs zu einem PDF zusammenfassen wollen",
     intent: "unter macOS aus Bildern ein PDF erstellen",
     angle:
-      "Die Seite vergleicht den schnellen Vorschau-Weg mit einem browserbasierten Mehrbild-Workflow, der fuer wiederkehrende Aufgaben oft uebersichtlicher ist.",
+      "Die Seite vergleicht den schnellen Vorschau-Weg mit einem browserbasierten Mehrbild-Workflow, der für wiederkehrende Aufgaben oft übersichtlicher ist.",
     scenario:
-      "Fotos aus Fotos-App, AirDrop, Scanner oder Downloads sollen als ein PDF an Schule, Arbeitgeber, Behoerde oder Kunde gehen.",
+      "Fotos aus Fotos-App, AirDrop, Scanner oder Downloads sollen als ein PDF an Schule, Arbeitgeber, Behörde oder Kunde gehen.",
     qualityFocus:
       "Vor dem Export sollten Bilder im Finder oder in Vorschau gedreht und unscharfe Aufnahmen ersetzt werden.",
     privacyFocus:
-      "Lokale Verarbeitung passt gut zu macOS-Workflows, bei denen Dateien aus Mail, iCloud oder AirDrop nicht unnoetig in fremde Dienste wandern sollen.",
+      "Lokale Verarbeitung passt gut zu macOS-Workflows, bei denen Dateien aus Mail, iCloud oder AirDrop nicht unnötig in fremde Dienste wandern sollen.",
     workflow:
-      "Bilder im Finder sammeln, in der gewuenschten Reihenfolge ins Tool laden, PDF herunterladen und in Vorschau kontrollieren.",
+      "Bilder im Finder sammeln, in der gewünschten Reihenfolge ins Tool laden, PDF herunterladen und in Vorschau kontrollieren.",
     pitfalls: [
       "Die Fotos-App exportiert manchmal andere Dateinamen als erwartet.",
       "AirDrop-Bilder landen je nach Einstellung an unterschiedlichen Orten.",
-      "Einzelne Vorschau-Exporte koennen bei mehreren Bildern mehr Klicks verursachen."
+      "Einzelne Vorschau-Exporte können bei mehreren Bildern mehr Klicks verursachen."
     ],
     steps: [
       "JPGs im Finder sammeln.",
       "Bilder sortieren und drehen.",
-      "Dateien im Browser-Tool auswaehlen.",
+      "Dateien im Browser-Tool auswählen.",
       "PDF erstellen.",
       "PDF in Vorschau kontrollieren."
     ],
@@ -476,7 +476,7 @@ export const seoPages: SeoPage[] = [
   {
     keyword: "jpg in pdf umwandeln online",
     slug: "jpg-in-pdf-umwandeln-online",
-    title: "JPG in PDF umwandeln online - Bilder im Browser buendeln",
+    title: "JPG in PDF umwandeln online - Bilder im Browser bündeln",
     description:
       "JPG in PDF umwandeln online: mehrere Bilder direkt im Browser zu einer PDF-Datei zusammenfassen, ohne Konto und ohne Upload-Zwang.",
     group: "online",
@@ -484,26 +484,26 @@ export const seoPages: SeoPage[] = [
     audience: "Nutzer, die online JPG-Bilder in ein PDF bringen wollen",
     intent: "im Browser aus Bildern ein PDF erstellen",
     angle:
-      "Die Online-Variante fuer JPG nach PDF betont einen schnellen Webfluss: Bilder liegen lokal, das Ergebnis wird direkt im Browser erzeugt.",
+      "Die Online-Variante für JPG nach PDF betont einen schnellen Webfluss: Bilder liegen lokal, das Ergebnis wird direkt im Browser erzeugt.",
     scenario:
       "Fotos aus der Galerie, Downloads oder Screenshots sollen in einem Portal als eine PDF-Datei hochgeladen werden.",
     qualityFocus:
-      "Das PDF uebernimmt die Bildschaerfe. Wer vorher unscharfe oder abgeschnittene JPGs aussortiert, spart spaeter Korrekturrunden.",
+      "Das PDF übernimmt die Bildschärfe. Wer vorher unscharfe oder abgeschnittene JPGs aussortiert, spart später Korrekturrunden.",
     privacyFocus:
       "Eine lokale Browser-Erstellung ist besonders bei Ausweisen, Belegen und medizinischen Dokumenten sinnvoll.",
     workflow:
-      "Bilder online auswaehlen, Reihenfolge behalten, PDF erstellen und herunterladen.",
+      "Bilder online auswählen, Reihenfolge behalten, PDF erstellen und herunterladen.",
     pitfalls: [
-      "Mobile Datenverbindungen sind fuer grosse Upload-Konverter unpraktisch.",
+      "Mobile Datenverbindungen sind für große Upload-Konverter unpraktisch.",
       "Manche Online-Tools komprimieren Bilder ohne Nachfrage.",
-      "Ein PDF mit falsch sortierten Bildern wird meist erst beim Empfaenger bemerkt."
+      "Ein PDF mit falsch sortierten Bildern wird meist erst beim Empfänger bemerkt."
     ],
     steps: [
-      "Online-Werkzeug oeffnen.",
-      "JPG-Dateien auswaehlen.",
-      "Reihenfolge pruefen.",
+      "Online-Werkzeug öffnen.",
+      "JPG-Dateien auswählen.",
+      "Reihenfolge prüfen.",
       "PDF generieren.",
-      "Datei herunterladen und oeffnen."
+      "Datei herunterladen und öffnen."
     ],
     related: [
       "jpg-in-pdf-umwandeln",
@@ -515,31 +515,31 @@ export const seoPages: SeoPage[] = [
   {
     keyword: "pdf in svg umwandeln",
     slug: "pdf-in-svg-umwandeln",
-    title: "PDF in SVG umwandeln - fuer Web und Layout pruefen",
+    title: "PDF in SVG umwandeln - für Web und Layout prüfen",
     description:
-      "PDF in SVG umwandeln: Wann SVG sinnvoll ist, wo Grenzen liegen und wie ein browserbasierter SVG-Export fuer Seitenvorschauen funktioniert.",
+      "PDF in SVG umwandeln: Wann SVG sinnvoll ist, wo Grenzen liegen und wie ein browserbasierter SVG-Export für Seitenvorschauen funktioniert.",
     group: "svg-pdf",
     toolMode: "pdf-to-svg",
     audience: "Designer, Entwickler und Content-Teams, die PDF-Seiten im Web oder Layout als SVG nutzen wollen",
-    intent: "eine PDF-Seite als SVG-Datei erhalten oder verstehen, wann echte Vektoren benoetigt werden",
+    intent: "eine PDF-Seite als SVG-Datei erhalten oder verstehen, wann echte Vektoren benötigt werden",
     angle:
       "Diese Seite unterscheidet zwischen einem layoutgetreuen SVG-Container und einer echten Vektorisierung. Das ist wichtig, weil viele PDF-Dateien gemischte Inhalte aus Text, Bildern und Vektoren enthalten.",
     scenario:
-      "Ein PDF-Poster soll im Web eingebettet, eine Seitenvorschau als skalierbare Grafik abgelegt oder ein Layout fuer eine technische Dokumentation weitergereicht werden.",
+      "Ein PDF-Poster soll im Web eingebettet, eine Seitenvorschau als skalierbare Grafik abgelegt oder ein Layout für eine technische Dokumentation weitergereicht werden.",
     qualityFocus:
-      "Fuer reine Vorschauen reicht ein SVG mit eingebettetem gerendertem Seitenbild. Fuer Logos, Plots oder Schneidedaten braucht man dagegen echte Pfade aus der Originalquelle.",
+      "Für reine Vorschauen reicht ein SVG mit eingebettetem gerendertem Seitenbild. Für Logos, Plots oder Schneidedaten braucht man dagegen echte Pfade aus der Originalquelle.",
     privacyFocus:
-      "Wenn ein PDF vertrauliche Layouts enthaelt, ist es sinnvoll, die Vorschau lokal zu erzeugen, bevor sie in ein CMS oder Repository wandert.",
+      "Wenn ein PDF vertrauliche Layouts enthält, ist es sinnvoll, die Vorschau lokal zu erzeugen, bevor sie in ein CMS oder Repository wandert.",
     workflow:
-      "Das Werkzeug rendert die PDF-Seite im Browser und verpackt sie in eine SVG-Datei. Zusaetzlich erklaert die Seite, wann ein Quellformat wie AI, SVG oder InDesign gebraucht wird.",
+      "Das Werkzeug rendert die PDF-Seite im Browser und verpackt sie in eine SVG-Datei. Zusätzlich erklärt die Seite, wann ein Quellformat wie AI, SVG oder InDesign gebraucht wird.",
     pitfalls: [
       "Ein SVG-Container macht aus einem gescannten PDF keine echten Vektoren.",
-      "Eingebettete Rasterbilder koennen bei starker Vergroesserung unscharf bleiben.",
+      "Eingebettete Rasterbilder können bei starker Vergrößerung unscharf bleiben.",
       "Fonts und Transparenzen sind bei PDF-zu-SVG-Workflows oft der kritische Punkt."
     ],
     steps: [
       "PDF-Datei laden.",
-      "Eine Seite fuer den SVG-Export auswaehlen.",
+      "Eine Seite für den SVG-Export auswählen.",
       "Skalierung passend zur Webdarstellung setzen.",
       "SVG-Datei herunterladen.",
       "Bei Vektorbedarf das Ergebnis in einem Editor kontrollieren."
@@ -554,34 +554,34 @@ export const seoPages: SeoPage[] = [
   {
     keyword: "pdf in tiff umwandeln",
     slug: "pdf-in-tiff-umwandeln",
-    title: "PDF in TIFF umwandeln - fuer Archiv und Druckvorstufe",
+    title: "PDF in TIFF umwandeln - für Archiv und Druckvorstufe",
     description:
-      "PDF in TIFF umwandeln: Wann TIFF sinnvoll ist, wie Seiten als Bilddateien exportiert werden und welche Qualitaetsfragen wichtig sind.",
+      "PDF in TIFF umwandeln: Wann TIFF sinnvoll ist, wie Seiten als Bilddateien exportiert werden und welche Qualitätsfragen wichtig sind.",
     group: "tiff-pdf",
     toolMode: "pdf-to-tiff",
-    audience: "Nutzer aus Archiv, Scan-Verarbeitung oder Druckvorstufe, die PDF-Seiten als TIFF benoetigen",
+    audience: "Nutzer aus Archiv, Scan-Verarbeitung oder Druckvorstufe, die PDF-Seiten als TIFF benötigen",
     intent: "PDF-Seiten in ein bildbasiertes TIFF-Format bringen",
     angle:
-      "TIFF ist weniger ein Alltagsformat als ein Arbeitsformat fuer Archivierung, Scan-Strecken und bestimmte Druck- oder DMS-Prozesse. Deshalb erklaert diese Seite den Zweck genauer.",
+      "TIFF ist weniger ein Alltagsformat als ein Arbeitsformat für Archivierung, Scan-Strecken und bestimmte Druck- oder DMS-Prozesse. Deshalb erklärt diese Seite den Zweck genauer.",
     scenario:
       "Ein Dokumentenmanagementsystem, eine Archivvorgabe oder eine Druckerei verlangt TIFF-Dateien statt PDF oder JPG.",
     qualityFocus:
-      "Bei TIFF geht es um verlustarme oder unkomprimierte Bilddaten. Die Ausgabe wird groesser, kann aber fuer Weiterverarbeitung stabiler sein.",
+      "Bei TIFF geht es um verlustarme oder unkomprimierte Bilddaten. Die Ausgabe wird größer, kann aber für Weiterverarbeitung stabiler sein.",
     privacyFocus:
-      "Archiv- und Druckdaten enthalten oft vertrauliche Inhalte. Lokale Erzeugung ist sinnvoll, bevor Dateien an ein externes System uebergeben werden.",
+      "Archiv- und Druckdaten enthalten oft vertrauliche Inhalte. Lokale Erzeugung ist sinnvoll, bevor Dateien an ein externes System übergeben werden.",
     workflow:
       "Das Browser-Tool rendert PDF-Seiten und speichert sie als TIFF-Dateien. Bei mehreren Seiten wird ein geordnetes Paket erzeugt.",
     pitfalls: [
-      "TIFF-Dateien sind oft deutlich groesser als JPG-Dateien.",
+      "TIFF-Dateien sind oft deutlich größer als JPG-Dateien.",
       "Nicht jede Webanwendung akzeptiert TIFF als Uploadformat.",
-      "Mehrseitige TIFF-Spezialfaelle werden von Browsern nicht einheitlich unterstuetzt."
+      "Mehrseitige TIFF-Spezialfälle werden von Browsern nicht einheitlich unterstützt."
     ],
     steps: [
       "PDF-Datei laden.",
-      "Zielauflosung festlegen.",
+      "Zielauflösung festlegen.",
       "TIFF-Export starten.",
-      "Dateigroesse und Lesbarkeit pruefen.",
-      "Datei nur in Systemen einsetzen, die TIFF ausdruecklich erwarten."
+      "Dateigröße und Lesbarkeit prüfen.",
+      "Datei nur in Systemen einsetzen, die TIFF ausdrücklich erwarten."
     ],
     related: [
       "tiff-in-pdf-umwandeln",
@@ -595,31 +595,31 @@ export const seoPages: SeoPage[] = [
     slug: "pdf-in-eps-umwandeln",
     title: "PDF in EPS umwandeln - Druckvorstufe richtig vorbereiten",
     description:
-      "PDF in EPS umwandeln: Grenzen von Browser-Tools, sinnvolle Pruefung und Workflow-Tipps fuer Vektor- und Druckdaten.",
+      "PDF in EPS umwandeln: Grenzen von Browser-Tools, sinnvolle Prüfung und Workflow-Tipps für Vektor- und Druckdaten.",
     group: "vector",
     toolMode: "pdf-audit",
-    audience: "Designer, Druckvorstufen-Nutzer und Teams, die EPS aus PDF-Daten ableiten muessen",
-    intent: "herausfinden, wie ein PDF fuer EPS- oder PostScript-Workflows vorbereitet werden kann",
+    audience: "Designer, Druckvorstufen-Nutzer und Teams, die EPS aus PDF-Daten ableiten müssen",
+    intent: "herausfinden, wie ein PDF für EPS- oder PostScript-Workflows vorbereitet werden kann",
     angle:
-      "Diese Seite macht keine falschen Versprechen: EPS ist ein PostScript-basiertes Produktionsformat. Ein Browser kann ein PDF pruefen und vorbereitende Hinweise geben, ersetzt aber kein professionelles Druckwerkzeug.",
+      "Diese Seite macht keine falschen Versprechen: EPS ist ein PostScript-basiertes Produktionsformat. Ein Browser kann ein PDF prüfen und vorbereitende Hinweise geben, ersetzt aber kein professionelles Druckwerkzeug.",
     scenario:
       "Eine Druckerei, ein Plotter-Workflow oder ein altes Layoutsystem verlangt EPS statt PDF, obwohl die Ausgangsdatei nur als PDF vorliegt.",
     qualityFocus:
-      "Entscheidend ist, ob die PDF-Datei echte Vektorpfade, eingebettete Schriften und saubere Farbraeume enthaelt. Ein reiner Scan wird durch EPS nicht vektoriell.",
+      "Entscheidend ist, ob die PDF-Datei echte Vektorpfade, eingebettete Schriften und saubere Farbräume enthält. Ein reiner Scan wird durch EPS nicht vektoriell.",
     privacyFocus:
-      "Produktionsdaten koennen Marken, Kundendaten oder interne Layouts enthalten. Eine lokale Analyse hilft, bevor Dateien weitergegeben werden.",
+      "Produktionsdaten können Marken, Kundendaten oder interne Layouts enthalten. Eine lokale Analyse hilft, bevor Dateien weitergegeben werden.",
     workflow:
-      "Das Werkzeug analysiert Seitenzahl, Textanteil und Seitengroessen. Danach beschreibt die Seite, wann Ghostscript, Illustrator, Inkscape oder die Originaldatei sinnvoll sind.",
+      "Das Werkzeug analysiert Seitenzahl, Textanteil und Seitengrößen. Danach beschreibt die Seite, wann Ghostscript, Illustrator, Inkscape oder die Originaldatei sinnvoll sind.",
     pitfalls: [
-      "PDF nach EPS ist kein allgemeiner Qualitaetsverbesserer.",
-      "Transparenzen und moderne PDF-Effekte koennen im EPS-Workflow verloren gehen.",
+      "PDF nach EPS ist kein allgemeiner Qualitätsverbesserer.",
+      "Transparenzen und moderne PDF-Effekte können im EPS-Workflow verloren gehen.",
       "Scans bleiben Rasterbilder, auch wenn die Dateiendung EPS lautet."
     ],
     steps: [
       "PDF-Datei lokal analysieren.",
-      "Text- und Seiteninformationen pruefen.",
-      "Klaeren, ob echte Vektoren benoetigt werden.",
-      "Professionelles Exportwerkzeug waehlen.",
+      "Text- und Seiteninformationen prüfen.",
+      "Klären, ob echte Vektoren benötigt werden.",
+      "Professionelles Exportwerkzeug wählen.",
       "EPS-Ausgabe in der Zielsoftware testen."
     ],
     related: [
@@ -634,32 +634,32 @@ export const seoPages: SeoPage[] = [
     slug: "tiff-in-pdf-umwandeln",
     title: "TIFF in PDF umwandeln - Archivbilder als Dokument",
     description:
-      "TIFF in PDF umwandeln: gescannte TIFF-Dateien in ein PDF bringen, lokal im Browser und mit Hinweisen fuer grosse Dateien.",
+      "TIFF in PDF umwandeln: gescannte TIFF-Dateien in ein PDF bringen, lokal im Browser und mit Hinweisen für große Dateien.",
     group: "tiff-pdf",
     toolMode: "tiff-to-pdf",
     audience: "Nutzer mit Scan- oder Archivdateien im TIFF-Format",
     intent: "TIFF-Bilder in eine PDF-Datei umwandeln, die leichter geteilt oder hochgeladen werden kann",
     angle:
-      "TIFF-Dateien sind robust, aber nicht ueberall bequem. Diese Seite zeigt, wie daraus ein handhabbares PDF fuer Versand, Ablage oder Upload wird.",
+      "TIFF-Dateien sind robust, aber nicht überall bequem. Diese Seite zeigt, wie daraus ein handhabbares PDF für Versand, Ablage oder Upload wird.",
     scenario:
-      "Ein Scanner, Archivsystem oder DMS liefert TIFF-Dateien, waehrend Empfaenger, Portale oder E-Mail-Prozesse PDF erwarten.",
+      "Ein Scanner, Archivsystem oder DMS liefert TIFF-Dateien, während Empfänger, Portale oder E-Mail-Prozesse PDF erwarten.",
     qualityFocus:
-      "Die Bildinformation aus dem TIFF sollte erhalten bleiben, ohne das PDF unnoetig zu vergroessern. Besonders bei mehrseitigen oder hochaufloesenden Scans zaehlt Kontrolle.",
+      "Die Bildinformation aus dem TIFF sollte erhalten bleiben, ohne das PDF unnötig zu vergrößern. Besonders bei mehrseitigen oder hochauflösenden Scans zählt Kontrolle.",
     privacyFocus:
-      "Archivscans enthalten haeufig personenbezogene Daten. Eine lokale Umwandlung reduziert externe Verarbeitungsschritte.",
+      "Archivscans enthalten häufig personenbezogene Daten. Eine lokale Umwandlung reduziert externe Verarbeitungsschritte.",
     workflow:
       "TIFF laden, Seite dekodieren, als PDF-Seite platzieren und Ergebnis herunterladen.",
     pitfalls: [
       "Nicht jeder Browser zeigt TIFF direkt an.",
-      "Sehr grosse TIFF-Dateien koennen viel Arbeitsspeicher brauchen.",
-      "Mehrseitige TIFFs sind technisch uneinheitlich und sollten nach dem Export geprueft werden."
+      "Sehr große TIFF-Dateien können viel Arbeitsspeicher brauchen.",
+      "Mehrseitige TIFFs sind technisch uneinheitlich und sollten nach dem Export geprüft werden."
     ],
     steps: [
-      "TIFF-Datei auswaehlen.",
+      "TIFF-Datei auswählen.",
       "Konvertierung starten.",
       "PDF herunterladen.",
       "Alle Seiten kontrollieren.",
-      "PDF im gewuenschten System testen."
+      "PDF im gewünschten System testen."
     ],
     related: [
       "pdf-in-tiff-umwandeln",
@@ -673,31 +673,31 @@ export const seoPages: SeoPage[] = [
     slug: "svg-in-pdf-umwandeln",
     title: "SVG in PDF umwandeln - Grafiken weitergeben",
     description:
-      "SVG in PDF umwandeln: Vektor- oder Webgrafiken als PDF bereitstellen, mit Hinweisen zu Groesse, Fonts und Browser-Rendering.",
+      "SVG in PDF umwandeln: Vektor- oder Webgrafiken als PDF bereitstellen, mit Hinweisen zu Größe, Fonts und Browser-Rendering.",
     group: "svg-pdf",
     toolMode: "svg-to-pdf",
-    audience: "Nutzer, die SVG-Grafiken fuer Versand, Druckvorschau oder Dokumentation als PDF brauchen",
+    audience: "Nutzer, die SVG-Grafiken für Versand, Druckvorschau oder Dokumentation als PDF brauchen",
     intent: "eine SVG-Datei in ein PDF bringen, das leichter weitergegeben werden kann",
     angle:
-      "SVG ist fuer Web und skalierbare Grafiken stark, aber nicht jeder Empfaenger kann SVG-Dateien oeffnen. PDF ist als Austauschformat oft vertrauter.",
+      "SVG ist für Web und skalierbare Grafiken stark, aber nicht jeder Empfänger kann SVG-Dateien öffnen. PDF ist als Austauschformat oft vertrauter.",
     scenario:
-      "Ein Logoentwurf, Diagramm, Icon-Set, technische Grafik oder exportiertes Webbild soll in ein PDF fuer Freigabe, Kommentar oder Archiv.",
+      "Ein Logoentwurf, Diagramm, Icon-Set, technische Grafik oder exportiertes Webbild soll in ein PDF für Freigabe, Kommentar oder Archiv.",
     qualityFocus:
       "Fonts, externe Bilder und CSS im SVG sind die kritischen Punkte. Ein sauber eingebettetes SVG liefert die beste PDF-Ausgabe.",
     privacyFocus:
-      "Grafiken koennen Markendaten oder interne Diagramme enthalten. Lokales Rendern im Browser vermeidet unnoetige Uploads.",
+      "Grafiken können Markendaten oder interne Diagramme enthalten. Lokales Rendern im Browser vermeidet unnötige Uploads.",
     workflow:
       "SVG-Datei laden, im Browser rendern, als PDF-Seite platzieren und Ergebnis herunterladen.",
     pitfalls: [
-      "Externe Schriftarten oder Bilder im SVG koennen beim Rendern fehlen.",
-      "Sehr kleine ViewBox-Werte koennen zu unerwarteten Seitenformaten fuehren.",
-      "Nicht jedes SVG ist fuer Druckfarben oder Beschnitt vorbereitet."
+      "Externe Schriftarten oder Bilder im SVG können beim Rendern fehlen.",
+      "Sehr kleine ViewBox-Werte können zu unerwarteten Seitenformaten führen.",
+      "Nicht jedes SVG ist für Druckfarben oder Beschnitt vorbereitet."
     ],
     steps: [
-      "SVG-Datei auswaehlen.",
+      "SVG-Datei auswählen.",
       "Vorschau rendern lassen.",
       "PDF erzeugen.",
-      "PDF oeffnen und Grafikkanten pruefen.",
+      "PDF öffnen und Grafikkanten prüfen.",
       "Bei Produktionsdruck Originaldaten bereithalten."
     ],
     related: [
@@ -710,33 +710,33 @@ export const seoPages: SeoPage[] = [
   {
     keyword: "pdf in vektordatei umwandeln",
     slug: "pdf-in-vektordatei-umwandeln",
-    title: "PDF in Vektordatei umwandeln - Vektoren realistisch pruefen",
+    title: "PDF in Vektordatei umwandeln - Vektoren realistisch prüfen",
     description:
-      "PDF in Vektordatei umwandeln: kostenlos lokal pruefen, ob echte Vektoren vorhanden sind, und passende Wege fuer SVG, EPS oder Originaldaten waehlen.",
+      "PDF in Vektordatei umwandeln: kostenlos lokal prüfen, ob echte Vektoren vorhanden sind, und passende Wege für SVG, EPS oder Originaldaten wählen.",
     group: "vector",
     toolMode: "pdf-audit",
     audience: "Nutzer, die aus einem PDF eine bearbeitbare Vektorgrundlage gewinnen wollen",
     intent: "herausfinden, ob und wie ein PDF als Vektordatei weitergenutzt werden kann",
     angle:
-      "Diese Seite setzt Erwartungen gerade: Ein PDF kann Vektoren enthalten, muss es aber nicht. Ein Scan bleibt Rasterbild, auch wenn er in einer PDF-Huelle steckt.",
+      "Diese Seite setzt Erwartungen gerade: Ein PDF kann Vektoren enthalten, muss es aber nicht. Ein Scan bleibt Rasterbild, auch wenn er in einer PDF-Hülle steckt.",
     scenario:
       "Ein Logo, Plot, Schnittmuster, Diagramm oder technischer Plan liegt nur als PDF vor und soll in einem Vektorprogramm weiterbearbeitet werden.",
     qualityFocus:
       "Relevant sind Pfade, Textobjekte, eingebettete Schriften und Bilder. Die lokale Analyse gibt Hinweise, ob ein PDF eher text-/vektorhaltig oder rein bildbasiert ist.",
     privacyFocus:
-      "Vektorquellen koennen Marken- oder Produktionsdaten enthalten. Eine lokale Vorpruefung ist sinnvoll, bevor die Datei an externe Konverter geht.",
+      "Vektorquellen können Marken- oder Produktionsdaten enthalten. Eine lokale Vorprüfung ist sinnvoll, bevor die Datei an externe Konverter geht.",
     workflow:
-      "Das Tool analysiert die PDF-Struktur grob und kostenlos im Browser. Danach fuehrt die Seite zu SVG-, EPS- oder Originaldatei-Workflows.",
+      "Das Tool analysiert die PDF-Struktur grob und kostenlos im Browser. Danach führt die Seite zu SVG-, EPS- oder Originaldatei-Workflows.",
     pitfalls: [
       "Automatische Vektorisierung erzeugt oft ungenaue Pfade.",
-      "Schriften koennen beim Oeffnen in Vektorprogrammen ersetzt werden.",
+      "Schriften können beim Öffnen in Vektorprogrammen ersetzt werden.",
       "Ein JPG in einer PDF-Datei wird durch Umbenennen nicht zu einer Vektorgrafik."
     ],
     steps: [
       "PDF-Datei analysieren.",
       "Text- und Seiteninformationen bewerten.",
-      "Klaeren, ob Pfade oder nur Rasterbilder vorhanden sind.",
-      "Passendes Zielformat waehlen.",
+      "Klären, ob Pfade oder nur Rasterbilder vorhanden sind.",
+      "Passendes Zielformat wählen.",
       "Ergebnis in der Zielsoftware kontrollieren."
     ],
     related: [

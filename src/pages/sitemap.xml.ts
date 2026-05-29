@@ -1,10 +1,8 @@
 import type { APIRoute } from "astro";
 import { allSeoPages, pathFor, site } from "../data/pages";
 
-const staticPages = ["/ueber-uns/", "/kontakt/", "/datenschutz/", "/impressum/"];
-
 export const GET: APIRoute = () => {
-  const urls = [...allSeoPages.map(pathFor), ...staticPages];
+  const urls = allSeoPages.map(pathFor);
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
     .map(
       (path) =>

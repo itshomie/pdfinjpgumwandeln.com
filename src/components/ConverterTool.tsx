@@ -34,28 +34,28 @@ const modeCopy: Record<ToolMode, { accept: string; multiple: boolean; title: str
     accept: "application/pdf,.pdf",
     multiple: false,
     title: "PDF als JPG exportieren",
-    hint: "Eine PDF-Datei auswaehlen. Mehrere Seiten werden als ZIP gespeichert.",
+    hint: "Eine PDF-Datei auswählen. Mehrere Seiten werden als ZIP gespeichert.",
     button: "JPG erzeugen"
   },
   "jpg-to-pdf": {
     accept: "image/jpeg,image/jpg,image/png,image/webp,.jpg,.jpeg,.png,.webp",
     multiple: true,
     title: "Bilder als PDF speichern",
-    hint: "Ein oder mehrere JPG-, PNG- oder WebP-Bilder auswaehlen.",
+    hint: "Ein oder mehrere JPG-, PNG- oder WebP-Bilder auswählen.",
     button: "PDF erzeugen"
   },
   "pdf-to-svg": {
     accept: "application/pdf,.pdf",
     multiple: false,
     title: "PDF-Seite als SVG-Container exportieren",
-    hint: "Erzeugt ein SVG mit eingebetteter Seitenvorschau fuer Web- und Layouttests.",
+    hint: "Erzeugt ein SVG mit eingebetteter Seitenvorschau für Web- und Layouttests.",
     button: "SVG erzeugen"
   },
   "pdf-to-tiff": {
     accept: "application/pdf,.pdf",
     multiple: false,
     title: "PDF-Seiten als TIFF exportieren",
-    hint: "Erzeugt unkomprimierte TIFF-Dateien. Das Ergebnis kann deutlich groesser sein.",
+    hint: "Erzeugt unkomprimierte TIFF-Dateien. Das Ergebnis kann deutlich größer sein.",
     button: "TIFF erzeugen"
   },
   "svg-to-pdf": {
@@ -75,8 +75,8 @@ const modeCopy: Record<ToolMode, { accept: string; multiple: boolean; title: str
   "pdf-audit": {
     accept: "application/pdf,.pdf",
     multiple: false,
-    title: "PDF fuer Vektor- und EPS-Workflows pruefen",
-    hint: "Analysiert Seiten, Groessen und Textanteil. Fuer echte EPS-Ausgabe ist Spezialsoftware erforderlich.",
+    title: "PDF für Vektor- und EPS-Workflows prüfen",
+    hint: "Analysiert Seiten, Größen und Textanteil. Für echte EPS-Ausgabe ist Spezialsoftware erforderlich.",
     button: "PDF analysieren"
   }
 };
@@ -98,7 +98,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
   const [results, setResults] = useState<ResultItem[]>([]);
 
   const fileSummary = useMemo(() => {
-    if (files.length === 0) return "Noch keine Datei ausgewaehlt";
+    if (files.length === 0) return "Noch keine Datei ausgewählt";
     if (files.length === 1) return `${files[0].name} (${formatBytes(files[0].size)})`;
     const size = files.reduce((sum, file) => sum + file.size, 0);
     return `${files.length} Dateien (${formatBytes(size)})`;
@@ -106,7 +106,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
 
   async function runConversion() {
     if (files.length === 0) {
-      setMessage("Bitte zuerst eine Datei auswaehlen.");
+      setMessage("Bitte zuerst eine Datei auswählen.");
       return;
     }
 
@@ -134,7 +134,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
         setResults(created);
       }
 
-      setMessage("Fertig. Bitte Ergebnis kurz oeffnen und pruefen.");
+      setMessage("Fertig. Bitte Ergebnis kurz öffnen und prüfen.");
     } catch (error) {
       console.error(error);
       setMessage(error instanceof Error ? error.message : "Die Datei konnte nicht verarbeitet werden.");
@@ -144,7 +144,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
   }
 
   return (
-    <div className="converter-shell" aria-label={`Konverter fuer ${keyword}`}>
+    <div className="converter-shell" aria-label={`Konverter für ${keyword}`}>
       <div className="converter-head">
         <div>
           <p className="tool-label">Lokales Browser-Werkzeug</p>
@@ -164,7 +164,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
         }}
       >
         <Upload aria-hidden="true" />
-        <span>Datei hier ablegen oder auswaehlen</span>
+        <span>Datei hier ablegen oder auswählen</span>
         <small>{fileSummary}</small>
         <input
           type="file"
@@ -182,7 +182,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
           </div>
           {mode !== "pdf-audit" && (
             <>
-              <div className="segmented" aria-label="Aufloesung">
+              <div className="segmented" aria-label="Auflösung">
                 {scaleOptions.map((item) => (
                   <button
                     key={item.label}
@@ -196,7 +196,7 @@ export default function ConverterTool({ mode, keyword }: Props) {
               </div>
               {mode === "pdf-to-jpg" && (
                 <label className="range-row">
-                  <span>JPEG-Qualitaet {Math.round(quality * 100)}%</span>
+                  <span>JPEG-Qualität {Math.round(quality * 100)}%</span>
                   <input
                     type="range"
                     min="0.65"
@@ -349,17 +349,17 @@ async function svgToPdf(file: File): Promise<ResultItem> {
 
 async function tiffToPdf(file: File): Promise<ResultItem> {
   const buffer = await file.arrayBuffer();
-  const decoder = UTIF as unknown as {
+  const decoder = ((UTIF as { default?: unknown }).default ?? UTIF) as {
     decode: (buffer: ArrayBuffer) => Array<Record<string, unknown>>;
-    decodeImages: (buffer: ArrayBuffer, ifds: Array<Record<string, unknown>>) => void;
+    decodeImage: (buffer: ArrayBuffer, ifd: Record<string, unknown>) => void;
     toRGBA8: (ifd: Record<string, unknown>) => Uint8Array;
   };
   const ifds = decoder.decode(buffer);
-  decoder.decodeImages(buffer, ifds);
-  if (ifds.length === 0) throw new Error("Die TIFF-Datei enthaelt kein dekodierbares Bild.");
+  if (ifds.length === 0) throw new Error("Die TIFF-Datei enthält kein dekodierbares Bild.");
 
   let doc: jsPDF | null = null;
   for (const ifd of ifds) {
+    decoder.decodeImage(buffer, ifd);
     const width = Number(ifd.width || ifd.t256 || 1000);
     const height = Number(ifd.height || ifd.t257 || 1000);
     const rgba = decoder.toRGBA8(ifd);
@@ -389,10 +389,10 @@ async function tiffToPdf(file: File): Promise<ResultItem> {
 async function auditPdf(file: File): Promise<ResultItem> {
   const pdf = await loadPdf(file);
   const lines = [
-    `Analyse fuer ${file.name}`,
+    `Analyse für ${file.name}`,
     `Seiten: ${pdf.numPages}`,
     "",
-    "Hinweise fuer Vektor-, SVG- und EPS-Workflows:"
+    "Hinweise für Vektor-, SVG- und EPS-Workflows:"
   ];
 
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
@@ -407,15 +407,15 @@ async function auditPdf(file: File): Promise<ResultItem> {
   lines.push(
     "",
     "Bewertung:",
-    "Viele Textobjekte sprechen dafuer, dass die PDF-Datei nicht nur ein reiner Scan ist. Das garantiert aber keine sauber bearbeitbaren Vektorpfade.",
-    "Fuer echte EPS-Ausgabe sind Werkzeuge wie Adobe Illustrator, Inkscape oder Ghostscript sinnvoll. Transparenzen, Fonts und Farbraeume muessen danach kontrolliert werden.",
-    "Wenn die Datei aus einem Scan besteht, ist eine automatische Vektorisierung meist nur fuer einfache Logos oder Strichgrafiken brauchbar."
+    "Viele Textobjekte sprechen dafür, dass die PDF-Datei nicht nur ein reiner Scan ist. Das garantiert aber keine sauber bearbeitbaren Vektorpfade.",
+    "Für echte EPS-Ausgabe sind Werkzeuge wie Adobe Illustrator, Inkscape oder Ghostscript sinnvoll. Transparenzen, Fonts und Farbräume müssen danach kontrolliert werden.",
+    "Wenn die Datei aus einem Scan besteht, ist eine automatische Vektorisierung meist nur für einfache Logos oder Strichgrafiken brauchbar."
   );
 
   return {
     name: `${baseName(file.name)}-analyse.txt`,
     blob: new Blob([lines.join("\n")], { type: "text/plain;charset=utf-8" }),
-    detail: "Lokaler PDF-Bericht fuer Vektor- und EPS-Entscheidungen"
+    detail: "Lokaler PDF-Bericht für Vektor- und EPS-Entscheidungen"
   };
 }
 

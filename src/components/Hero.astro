@@ -27,10 +27,10 @@ const { page, home = false } = Astro.props;
 
 <section class="tool-band" id="konverter">
   <div class="tool-intro">
-    <h2>Direkter Konverter fuer {page.keyword}</h2>
+    <h2>Direkter Konverter für {page.keyword}</h2>
     <p>
-      Waehle eine Datei aus, stelle die Ausgabequalitaet ein und lade das
-      Ergebnis direkt herunter. Die Verarbeitung laeuft lokal im Browser.
+      Wähle eine Datei aus, stelle die Ausgabequalität ein und lade das
+      Ergebnis direkt herunter. Die Verarbeitung läuft lokal im Browser.
     </p>
   </div>
   <ConverterTool client:only="react" mode={page.toolMode} keyword={page.keyword} />
