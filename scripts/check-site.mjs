@@ -9,6 +9,7 @@ const exceptions = new Set([
   "404.html",
   "datenschutz/index.html",
   "kontakt/index.html",
+  "ratgeber/index.html",
   "ueber-uns/index.html",
   "impressum/index.html"
 ]);

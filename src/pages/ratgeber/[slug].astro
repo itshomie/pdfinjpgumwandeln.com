@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageBySlug, pathFor, site, type SeoPage } from "../../data/pages";
+import { ratgeberPages, ratgeberPath, type RatgeberArticle } from "../../data/ratgeber";
+
+export function getStaticPaths() {
+  return ratgeberPages.map((article) => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+interface Props {
+  article: RatgeberArticle;
+}
+
+const { article } = Astro.props;
+const canonical = new URL(ratgeberPath(article), site.url).toString();
+const websiteUrl = new URL("/", site.url).toString();
+const relatedTools = article.relatedTools
+  .map((slug) => pageBySlug(slug))
+  .filter((page): page is SeoPage => Boolean(page))
+  .map((page) => ({ ...page, path: pathFor(page) }));
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${canonical}#article`,
+    url: canonical,
+    headline: article.title,
+    description: article.description,
+    inLanguage: "de-DE",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${websiteUrl}#website`,
+      name: site.name,
+      url: websiteUrl,
+      inLanguage: "de-DE"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Startseite",
+        item: websiteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Ratgeber",
+        item: new URL("/ratgeber/", site.url).toString()
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.keyword,
+        item: canonical
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={article.title} description={article.description} canonicalPath={ratgeberPath(article)} jsonLd={jsonLd}>
+  <article class="seo-article ratgeber-article">
+    <header class="article-header">
+      <p>Ratgeber</p>
+      <h1>{article.keyword}</h1>
+      <div class="article-summary">
+        {article.intro.map((paragraph) => (
+          <div>
+            <span>Einordnung</span>
+            <strong>{paragraph}</strong>
+          </div>
+        ))}
+        <div>
+          <span>Nächster Schritt</span>
+          <strong>Erst Format und Zielsystem klären, dann den passenden Konverter nutzen.</strong>
+        </div>
+      </div>
+    </header>
+
+    {article.sections.map((section) => (
+      <section class="article-section">
+        <h2>{section.heading}</h2>
+        {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        {section.table && (
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  {section.table.columns.map((column) => <th>{column}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {section.table.rows.map((row) => (
+                  <tr>
+                    {row.map((cell) => <td>{cell}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+    ))}
+
+    <section class="article-section faq-section" id="fragen">
+      <h2>Häufige Fragen zu {article.keyword}</h2>
+      <div class="faq-list">
+        {article.faqs.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="article-section related-section" aria-labelledby="related-tools-heading">
+      <h2 id="related-tools-heading">Passende Werkzeuge</h2>
+      <div class="related-links">
+        {relatedTools.map((tool) => (
+          <a href={tool.path}>
+            <span>{tool.keyword}</span>
+            <small>{tool.description}</small>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</BaseLayout>

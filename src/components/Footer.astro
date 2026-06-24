@@ -1,11 +1,18 @@
 ---
 import { pageBySlug, pathFor, site } from "../data/pages";
+import { ratgeberBySlug, ratgeberPath } from "../data/ratgeber";
 import EmailAddress from "./EmailAddress.astro";
 
 function footerLink(slug: string, label: string) {
   const page = pageBySlug(slug);
   if (!page) throw new Error(`Footer page not found: ${slug}`);
   return { label, href: pathFor(page) };
+}
+
+function footerRatgeberLink(slug: string, label: string) {
+  const article = ratgeberBySlug(slug);
+  if (!article) throw new Error(`Footer article not found: ${slug}`);
+  return { label, href: ratgeberPath(article) };
 }
 
 const footerGroups = [
@@ -33,8 +40,17 @@ const footerGroups = [
     links: [
       footerLink("pdf-in-svg-umwandeln", "PDF in SVG"),
       footerLink("pdf-in-tiff-umwandeln", "PDF in TIFF"),
-      footerLink("pdf-in-eps-umwandeln", "PDF in EPS"),
-      footerLink("pdf-in-vektordatei-umwandeln", "Vektordatei prüfen")
+      footerRatgeberLink("pdf-in-eps-umwandeln", "PDF in EPS"),
+      footerRatgeberLink("pdf-in-vektordatei-umwandeln", "Vektordatei prüfen")
+    ]
+  },
+  {
+    title: "Ratgeber",
+    links: [
+      { label: "Alle Ratgeber", href: "/ratgeber/" },
+      footerRatgeberLink("pdf-in-bilddatei-umwandeln", "PDF in Bilddatei"),
+      footerRatgeberLink("pdf-in-eps-umwandeln", "EPS verstehen"),
+      footerRatgeberLink("pdf-in-vektordatei-umwandeln", "Vektordatei")
     ]
   }
 ];

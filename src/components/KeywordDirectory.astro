@@ -1,5 +1,6 @@
 ---
 import { homePage, pageBySlug, pathFor } from "../data/pages";
+import { ratgeberBySlug, ratgeberPath } from "../data/ratgeber";
 
 function linkFor(slug: string, label?: string) {
   const page = pageBySlug(slug);
@@ -7,6 +8,15 @@ function linkFor(slug: string, label?: string) {
   return {
     label: label ?? page.keyword,
     href: pathFor(page)
+  };
+}
+
+function ratgeberLink(slug: string, label?: string) {
+  const article = ratgeberBySlug(slug);
+  if (!article) throw new Error(`Directory article not found: ${slug}`);
+  return {
+    label: label ?? article.keyword,
+    href: ratgeberPath(article)
   };
 }
 
@@ -20,7 +30,7 @@ const groups = [
       linkFor("pdf-in-jpg-umwandeln-windows"),
       linkFor("pdf-in-jpg-umwandeln-mac"),
       linkFor("pdf-in-jpg-umwandeln-handy"),
-      linkFor("pdf-in-bilddatei-umwandeln")
+      ratgeberLink("pdf-in-bilddatei-umwandeln")
     ]
   },
   {
@@ -41,8 +51,8 @@ const groups = [
     pages: [
       linkFor("pdf-in-svg-umwandeln"),
       linkFor("pdf-in-tiff-umwandeln"),
-      linkFor("pdf-in-eps-umwandeln"),
-      linkFor("pdf-in-vektordatei-umwandeln")
+      ratgeberLink("pdf-in-eps-umwandeln"),
+      ratgeberLink("pdf-in-vektordatei-umwandeln")
     ]
   },
   {

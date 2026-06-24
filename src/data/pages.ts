@@ -119,7 +119,7 @@ export const seoPages: SeoPage[] = [
       "pdf-in-jpg-umwandeln-windows",
       "pdf-in-jpg-umwandeln-mac",
       "pdf-in-jpg-umwandeln-handy",
-      "pdf-in-bilddatei-umwandeln"
+      "pdf-in-tiff-umwandeln"
     ]
   },
   {
@@ -236,46 +236,7 @@ export const seoPages: SeoPage[] = [
       "pdf-in-jpg-umwandeln-online",
       "pdf-in-jpg-umwandeln-windows",
       "pdf-in-jpg-umwandeln-mac",
-      "pdf-in-bilddatei-umwandeln"
-    ]
-  },
-  {
-    keyword: "pdf in bilddatei umwandeln",
-    slug: "pdf-in-bilddatei-umwandeln",
-    title: "PDF in Bilddatei umwandeln - JPG, TIFF oder SVG wählen",
-    description:
-      "PDF in Bilddatei umwandeln: Unterschiede zwischen JPG, TIFF und SVG verstehen und die passende Ausgabe für den Zweck wählen.",
-    group: "pdf-jpg",
-    toolMode: "pdf-to-jpg",
-    audience: "Nutzer, die noch nicht sicher sind, welches Bildformat aus einem PDF entstehen soll",
-    intent: "PDF-Inhalte als Bilddatei verwenden und das richtige Zielformat auswählen",
-    angle:
-      "Diese Seite ist der Format-Kompass. Sie erklärt, wann JPG, TIFF oder SVG sinnvoll ist, statt jeden Fall automatisch als JPG zu behandeln.",
-    scenario:
-      "Ein PDF soll in eine Webseite, ein Archiv, eine Präsentation, ein Shop-System oder eine Druckvorstufe übernommen werden.",
-    qualityFocus:
-      "JPG ist praktisch für Web und Fotos, TIFF für bestimmte Archiv- und Druckprozesse, SVG für Webeinbettung oder Vektor-nahe Workflows.",
-    privacyFocus:
-      "Da die Wahl des Formats oft vor der Weitergabe steht, ist lokale Verarbeitung ein guter Zwischenschritt.",
-    workflow:
-      "Zuerst wird der Zweck geklärt, danach wird das passende Ausgabeformat mit dem Werkzeug oder der verlinkten Spezialseite erzeugt.",
-    pitfalls: [
-      "JPG ist nicht ideal für Transparenz oder echte Vektoren.",
-      "TIFF kann für normale Web-Uploads zu groß sein.",
-      "SVG aus einem PDF ist nicht automatisch eine echte Vektordatei."
-    ],
-    steps: [
-      "Zielsystem prüfen.",
-      "Format auswählen.",
-      "PDF-Datei laden.",
-      "Bilddatei erzeugen.",
-      "Ergebnis im Zielsystem testen."
-    ],
-    related: [
-      "pdf-in-jpg-umwandeln-online",
-      "pdf-in-tiff-umwandeln",
-      "pdf-in-svg-umwandeln",
-      "pdf-in-vektordatei-umwandeln"
+      "jpg-in-pdf-umwandeln"
     ]
   },
   {
@@ -546,9 +507,9 @@ export const seoPages: SeoPage[] = [
     ],
     related: [
       "svg-in-pdf-umwandeln",
-      "pdf-in-vektordatei-umwandeln",
-      "pdf-in-eps-umwandeln",
-      "pdf-in-bilddatei-umwandeln"
+      "pdf-in-tiff-umwandeln",
+      "tiff-in-pdf-umwandeln",
+      "pdf-in-jpg-umwandeln-online"
     ]
   },
   {
@@ -585,47 +546,8 @@ export const seoPages: SeoPage[] = [
     ],
     related: [
       "tiff-in-pdf-umwandeln",
-      "pdf-in-bilddatei-umwandeln",
       "pdf-in-jpg-umwandeln-online",
-      "pdf-in-eps-umwandeln"
-    ]
-  },
-  {
-    keyword: "pdf in eps umwandeln",
-    slug: "pdf-in-eps-umwandeln",
-    title: "PDF in EPS umwandeln - Druckvorstufe richtig vorbereiten",
-    description:
-      "PDF in EPS umwandeln: Grenzen von Browser-Tools, sinnvolle Prüfung und Workflow-Tipps für Vektor- und Druckdaten.",
-    group: "vector",
-    toolMode: "pdf-audit",
-    audience: "Designer, Druckvorstufen-Nutzer und Teams, die EPS aus PDF-Daten ableiten müssen",
-    intent: "herausfinden, wie ein PDF für EPS- oder PostScript-Workflows vorbereitet werden kann",
-    angle:
-      "Diese Seite macht keine falschen Versprechen: EPS ist ein PostScript-basiertes Produktionsformat. Ein Browser kann ein PDF prüfen und vorbereitende Hinweise geben, ersetzt aber kein professionelles Druckwerkzeug.",
-    scenario:
-      "Eine Druckerei, ein Plotter-Workflow oder ein altes Layoutsystem verlangt EPS statt PDF, obwohl die Ausgangsdatei nur als PDF vorliegt.",
-    qualityFocus:
-      "Entscheidend ist, ob die PDF-Datei echte Vektorpfade, eingebettete Schriften und saubere Farbräume enthält. Ein reiner Scan wird durch EPS nicht vektoriell.",
-    privacyFocus:
-      "Produktionsdaten können Marken, Kundendaten oder interne Layouts enthalten. Eine lokale Analyse hilft, bevor Dateien weitergegeben werden.",
-    workflow:
-      "Das Werkzeug analysiert Seitenzahl, Textanteil und Seitengrößen. Danach beschreibt die Seite, wann Ghostscript, Illustrator, Inkscape oder die Originaldatei sinnvoll sind.",
-    pitfalls: [
-      "PDF nach EPS ist kein allgemeiner Qualitätsverbesserer.",
-      "Transparenzen und moderne PDF-Effekte können im EPS-Workflow verloren gehen.",
-      "Scans bleiben Rasterbilder, auch wenn die Dateiendung EPS lautet."
-    ],
-    steps: [
-      "PDF-Datei lokal analysieren.",
-      "Text- und Seiteninformationen prüfen.",
-      "Klären, ob echte Vektoren benötigt werden.",
-      "Professionelles Exportwerkzeug wählen.",
-      "EPS-Ausgabe in der Zielsoftware testen."
-    ],
-    related: [
-      "pdf-in-vektordatei-umwandeln",
       "pdf-in-svg-umwandeln",
-      "pdf-in-tiff-umwandeln",
       "svg-in-pdf-umwandeln"
     ]
   },
@@ -664,7 +586,7 @@ export const seoPages: SeoPage[] = [
     related: [
       "pdf-in-tiff-umwandeln",
       "jpg-in-pdf-umwandeln",
-      "pdf-in-bilddatei-umwandeln",
+      "pdf-in-jpg-umwandeln-online",
       "jpg-in-pdf-umwandeln-online"
     ]
   },
@@ -702,48 +624,7 @@ export const seoPages: SeoPage[] = [
     ],
     related: [
       "pdf-in-svg-umwandeln",
-      "pdf-in-vektordatei-umwandeln",
-      "pdf-in-eps-umwandeln",
       "jpg-in-pdf-umwandeln"
-    ]
-  },
-  {
-    keyword: "pdf in vektordatei umwandeln",
-    slug: "pdf-in-vektordatei-umwandeln",
-    title: "PDF in Vektordatei umwandeln - Vektoren realistisch prüfen",
-    description:
-      "PDF in Vektordatei umwandeln: kostenlos lokal prüfen, ob echte Vektoren vorhanden sind, und passende Wege für SVG, EPS oder Originaldaten wählen.",
-    group: "vector",
-    toolMode: "pdf-audit",
-    audience: "Nutzer, die aus einem PDF eine bearbeitbare Vektorgrundlage gewinnen wollen",
-    intent: "herausfinden, ob und wie ein PDF als Vektordatei weitergenutzt werden kann",
-    angle:
-      "Diese Seite setzt Erwartungen gerade: Ein PDF kann Vektoren enthalten, muss es aber nicht. Ein Scan bleibt Rasterbild, auch wenn er in einer PDF-Hülle steckt.",
-    scenario:
-      "Ein Logo, Plot, Schnittmuster, Diagramm oder technischer Plan liegt nur als PDF vor und soll in einem Vektorprogramm weiterbearbeitet werden.",
-    qualityFocus:
-      "Relevant sind Pfade, Textobjekte, eingebettete Schriften und Bilder. Die lokale Analyse gibt Hinweise, ob ein PDF eher text-/vektorhaltig oder rein bildbasiert ist.",
-    privacyFocus:
-      "Vektorquellen können Marken- oder Produktionsdaten enthalten. Eine lokale Vorprüfung ist sinnvoll, bevor die Datei an externe Konverter geht.",
-    workflow:
-      "Das Tool analysiert die PDF-Struktur grob und kostenlos im Browser. Danach führt die Seite zu SVG-, EPS- oder Originaldatei-Workflows.",
-    pitfalls: [
-      "Automatische Vektorisierung erzeugt oft ungenaue Pfade.",
-      "Schriften können beim Öffnen in Vektorprogrammen ersetzt werden.",
-      "Ein JPG in einer PDF-Datei wird durch Umbenennen nicht zu einer Vektorgrafik."
-    ],
-    steps: [
-      "PDF-Datei analysieren.",
-      "Text- und Seiteninformationen bewerten.",
-      "Klären, ob Pfade oder nur Rasterbilder vorhanden sind.",
-      "Passendes Zielformat wählen.",
-      "Ergebnis in der Zielsoftware kontrollieren."
-    ],
-    related: [
-      "pdf-in-svg-umwandeln",
-      "pdf-in-eps-umwandeln",
-      "svg-in-pdf-umwandeln",
-      "pdf-in-bilddatei-umwandeln"
     ]
   }
 ];

@@ -1027,6 +1027,16 @@ const contentBySlug: Record<string, PageContent> = {
 };
 
 const supplementalSections: Record<string, ArticleSection[]> = {
+  "": [
+    {
+      heading: "Welche Unterseite wirklich gebraucht wird",
+      paragraphs: [
+        "Nicht jede PDF-Aufgabe braucht eine neue Seite. Wenn du einfach nur eine PDF-Seite als JPG speichern willst, reicht der Konverter auf der Startseite. Wenn dagegen Windows-Downloads, Mac-Vorschau, Handy-Speicherorte oder ein anderes Zielformat eine Rolle spielen, ist die passende Detailseite sinnvoller.",
+        "Diese Trennung macht die Navigation klarer: Die Startseite bleibt der direkte Einstieg, die Unterseiten beantworten konkrete Situationen. So muss niemand mehrere fast gleiche Texte lesen, bevor die eigentliche Datei umgewandelt wird.",
+        "Für wiederkehrende Aufgaben lohnt sich ein fester Ablauf. Erst eine Testseite exportieren, dann Qualität prüfen, danach das komplette Dokument umwandeln. Das klingt langsam, spart aber Fehler bei langen PDFs."
+      ]
+    }
+  ],
   "pdf-in-jpg-umwandeln-online": [
     {
       heading: "Vor dem nächsten Upload online prüfen",
@@ -1201,7 +1211,8 @@ const supplementalSections: Record<string, ArticleSection[]> = {
         "Vor dem PDF-Export sollte die SVG-Datei deshalb möglichst eigenständig sein. Eingebettete Schriften oder sauber referenzierte Bilder reduzieren Überraschungen beim Rendern.",
         "Wenn das PDF für Freigaben genutzt wird, ist ein Vergleich mit der Ausgangsgrafik Pflicht. Kleine Unterschiede bei Schriftlauf, Linienbreite oder Farben können bei Logos und Diagrammen wichtig sein.",
         "Für Dokumentationen ist außerdem relevant, ob die PDF-Seite einen passenden Rand hat. Eine Grafik, die im Browser randlos wirkt, kann im PDF zu knapp platziert sein.",
-        "Wenn das PDF kommentiert oder freigegeben werden soll, hilft etwas Weißraum um die Grafik. So werden Markierungen, Anmerkungen und Druckvorschauen leichter lesbar. Besonders bei Diagrammen ist ein ruhiger Rand oft besser als eine randlose, aber gedrängte Darstellung. Für Freigabeschleifen ist Lesbarkeit wichtiger als maximale Flächennutzung, auch wenn die Quelldatei kompakter aussieht und weniger Platz belegt im Layout. Das macht Korrekturen übersichtlicher."
+        "Wenn das PDF kommentiert oder freigegeben werden soll, hilft etwas Weißraum um die Grafik. So werden Markierungen, Anmerkungen und Druckvorschauen leichter lesbar. Besonders bei Diagrammen ist ein ruhiger Rand oft besser als eine randlose, aber gedrängte Darstellung. Für Freigabeschleifen ist Lesbarkeit wichtiger als maximale Flächennutzung, auch wenn die Quelldatei kompakter aussieht und weniger Platz belegt im Layout. Das macht Korrekturen übersichtlicher.",
+        "Bei sehr technischen SVGs lohnt sich zusätzlich ein Blick auf eingebettete Bilder und externe Verweise. Wenn die Grafik nur im ursprünglichen Projektordner vollständig aussieht, sollte sie vor dem PDF-Export erst bereinigt werden."
       ]
     }
   ],

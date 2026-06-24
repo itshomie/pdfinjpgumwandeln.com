@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/pages";
+import { ratgeberPages, ratgeberPath } from "../../data/ratgeber";
+
+const title = "Ratgeber für PDF, JPG, TIFF, SVG und EPS";
+const description =
+  "Ratgeber für Dateiformate rund um PDF, JPG, TIFF, SVG und EPS: welches Format passt, wann ein Konverter reicht und wann Spezialsoftware nötig ist.";
+const canonicalPath = "/ratgeber/";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${new URL(canonicalPath, site.url).toString()}#webpage`,
+  url: new URL(canonicalPath, site.url).toString(),
+  name: title,
+  description,
+  inLanguage: "de-DE"
+};
+---
+
+<BaseLayout title={title} description={description} canonicalPath={canonicalPath} jsonLd={jsonLd}>
+  <section class="simple-page ratgeber-index">
+    <p class="domain-line">Ratgeber</p>
+    <h1>Formatfragen vor dem Umwandeln klären</h1>
+    <p>
+      Manche Aufgaben brauchen nicht noch einen weiteren Knopf, sondern eine klare Entscheidung:
+      welches Format ist gemeint, was kann ein Browser-Konverter leisten und wann ist ein anderes
+      Werkzeug ehrlicher?
+    </p>
+    <p>
+      Diese Ratgeber erklären genau diese Fälle. Danach kannst du gezielter zum passenden Werkzeug
+      wechseln, statt mehrere fast gleiche Konverterseiten durchzuprobieren.
+    </p>
+    <div class="ratgeber-grid">
+      {ratgeberPages.map((article) => (
+        <a href={ratgeberPath(article)} class="ratgeber-card">
+          <span>{article.keyword}</span>
+          <strong>{article.title}</strong>
+          <small>{article.description}</small>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
